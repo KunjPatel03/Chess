@@ -1,3 +1,5 @@
+package com.chess;
+
 import org.junit.*;
 import static org.junit.Assert.*;
 
