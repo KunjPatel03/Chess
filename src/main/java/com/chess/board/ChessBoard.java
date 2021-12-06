@@ -24,7 +24,7 @@ public class ChessBoard implements IChessBoard {
             throw new Exception("Index out of bound");
         }
 
-        return iSquareBoxesss[x][y];
+        return iSquareBoxes[x][y];
     }
 
 }
