@@ -1,6 +1,6 @@
-package com.chess.piece;
+package com.chess.board;
 
-import com.chess.piece.interfaces.ICoordinates;
+import com.chess.board.interfaces.ICoordinates;
 
 /**
  * @author Sanjuna Konda

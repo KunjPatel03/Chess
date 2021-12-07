@@ -1,4 +1,4 @@
-package com.chess.piece.interfaces;
+package com.chess.board.interfaces;
 
 /**
  * @author Sanjuna Konda

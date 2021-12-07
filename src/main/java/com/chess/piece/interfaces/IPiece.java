@@ -1,6 +1,8 @@
 package com.chess.piece.interfaces;
 
+import com.chess.board.SquareBox;
 import com.chess.board.interfaces.IBoard;
+import com.chess.board.interfaces.ICoordinates;
 
 /**
  * @author Sanjuna Konda
@@ -8,5 +10,6 @@ import com.chess.board.interfaces.IBoard;
 
 public interface IPiece {
     String getPieceName();
-    boolean isValidMove(IBoard board, ICoordinates iCoordinates, ICoordinates endCoordinates);
+    int getPieceColor();
+    boolean isValidMove(IBoard board, SquareBox startPosition, SquareBox endPosition);
 }

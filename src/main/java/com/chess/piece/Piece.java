@@ -1,7 +1,8 @@
 package com.chess.piece;
 
+import com.chess.board.SquareBox;
 import com.chess.board.interfaces.IBoard;
-import com.chess.piece.interfaces.ICoordinates;
+import com.chess.board.interfaces.ICoordinates;
 import com.chess.piece.interfaces.IPiece;
 import com.chess.piece.interfaces.IPieceExistence;
 
@@ -31,6 +32,11 @@ public abstract class Piece implements IPiece {
         return pieceName;
     }
 
-    public abstract boolean isValidMove(IBoard board, ICoordinates iCoordinates, ICoordinates endCoordinates);
+    @Override
+    public int getPieceColor() {
+        return this.color;
+    }
+
+    public abstract boolean isValidMove(IBoard board, SquareBox startPosition, SquareBox endPosition);
 
 }
