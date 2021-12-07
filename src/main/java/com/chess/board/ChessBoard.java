@@ -20,7 +20,8 @@ public class ChessBoard implements IChessBoard {
 
     }
 
-    public ISquareBox getSqureBox(int x, int y) throws Exception {
+    @Override
+    public ISquareBox getSqureBox(int x, int y) {
         try{
             if (x < 0 || x > 7 || y < 0 || y > 7) {
                 throw new Exception("Wrong input");
@@ -33,21 +34,24 @@ public class ChessBoard implements IChessBoard {
 
     public void initializeBoard(){
 
+        iSquareBoxes=iBoardFactory.createInitBoard().initializeNewBoard(iSquareBoxes);
+
     }
 
+    public void initializeWhitePiece(){
+
+    }
+
+    public void initializeBlackPiece(){
+
+    }
     @Override
     public void setPieceOnBoard(ICoordinates iCoordinates, IPiece iPiece) throws Exception {
         getSqureBox(iCoordinates.getCoordinateX(),iCoordinates.getCoordinateY()).setPiece(iPiece);
     }
 
     public void printChessBoard(){
-        for (int xCord =0; xCord<8; xCord++){
-            for(int yCord=0; yCord<8; yCord++)
-            {
-                System.out.print(iSquareBoxes[xCord][yCord].getPiece().getPieceName()+" ");
-            }
-            System.out.print('\n');
-        }
+        iBoardFactory.createShowBoard().displayBoard(iSquareBoxes);
     }
 
 }
