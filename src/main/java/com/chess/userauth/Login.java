@@ -3,6 +3,10 @@ package com.chess.userauth;
 import java.sql.*;
 import java.util.Scanner;
 
+/**
+ * @author Het Ketanbhai Shah
+ */
+
 public class Login implements ILogin {
     String userId;
     String password;
@@ -34,8 +38,10 @@ public class Login implements ILogin {
         setPassword(password);
         if (authenticate()) {
             System.out.println("Welcome to the Chess! You're logged in");
+
         } else {
             System.out.println("Either userid or password is incorrect!");
+            userLogin();
         }
     }
 

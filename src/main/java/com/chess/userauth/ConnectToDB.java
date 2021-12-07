@@ -3,6 +3,9 @@ package com.chess.userauth;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.*;
+/**
+ * @author Het Ketanbhai Shah
+ */
 
 public class ConnectToDB implements IConnectToDB {
     @Override

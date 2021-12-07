@@ -3,6 +3,10 @@ package com.chess.userauth;
 import java.sql.*;
 import java.util.Scanner;
 
+/**
+ * @author Het Ketanbhai Shah
+ */
+
 public class Registration implements IRegistration {
     String playerName;
     String userId;
@@ -48,7 +52,7 @@ public class Registration implements IRegistration {
         password = reader.nextLine();
         setPassword(password);
         if (insertData()) {
-            System.out.println("Thanks for the registration! You can now login now");
+            System.out.println("Thanks for the registration! You can login now");
             home.indexPart();
         } else {
             System.out.println("Something wrong with the values you have entered. Please try to register again");
