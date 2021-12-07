@@ -13,7 +13,6 @@ public class Coordinates implements ICoordinates {
     public Coordinates(int x, int y) {
         setCoordinateX(x);
         setCoordinateX(y);
-
     }
 
 
@@ -47,4 +46,5 @@ public class Coordinates implements ICoordinates {
     public void setCoordinateY(int y) {
         this.coordinateY=y;
     }
+
 }

@@ -13,4 +13,5 @@ public interface IBoardFactory {
 
     ICoordinates createCoordinates(int xCoordinate, int yCoordinate);
 
+    IChessBoard createChessboard();
 }

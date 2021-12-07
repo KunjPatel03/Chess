@@ -1,6 +1,7 @@
 package com.chess.board;
 
 import com.chess.board.interfaces.IBoardFactory;
+import com.chess.board.interfaces.IChessBoard;
 import com.chess.board.interfaces.ICoordinates;
 import com.chess.board.interfaces.ISquareBox;
 import com.chess.piece.Piece;
@@ -22,5 +23,11 @@ public class BoardFactory implements IBoardFactory {
     public ICoordinates createCoordinates(int xCoordinate, int yCoordinate) {
         return new Coordinates(xCoordinate,yCoordinate);
     }
+
+    @Override
+    public IChessBoard createChessboard() {
+        return  new ChessBoard();
+    }
+
 
 }

@@ -1,1 +1,11 @@
-C:\GitProject\group26\src\main\java\Main.java
+C:\GitProject\group26\src\main\java\com\chess\board\BoardFactory.java
+C:\GitProject\group26\src\main\java\com\chess\board\interfaces\ISquareBox.java
+C:\GitProject\group26\src\main\java\com\chess\board\SquareBox.java
+C:\GitProject\group26\src\main\java\com\chess\piece\Piece.java
+C:\GitProject\group26\src\main\java\com\chess\board\interfaces\IBoardFactory.java
+C:\GitProject\group26\src\main\java\com\chess\board\interfaces\ICoordinates.java
+C:\GitProject\group26\src\main\java\com\chess\board\interfaces\IChessBoard.java
+C:\GitProject\group26\src\main\java\com\chess\board\Coordinates.java
+C:\GitProject\group26\src\main\java\com\chess\Main.java
+C:\GitProject\group26\src\main\java\com\chess\board\ChessBoard.java
+C:\GitProject\group26\src\main\java\com\chess\piece\interfaces\IPiece.java
