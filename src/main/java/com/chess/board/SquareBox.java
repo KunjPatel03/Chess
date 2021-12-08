@@ -4,6 +4,10 @@ import com.chess.board.interfaces.ICoordinates;
 import com.chess.board.interfaces.ISquareBox;
 import com.chess.piece.interfaces.IPiece;
 
+/**
+ * @author Sanjuna Konda
+ */
+
 public class SquareBox implements ISquareBox {
     private IPiece iPiece;
     private ICoordinates iCoordinates;
