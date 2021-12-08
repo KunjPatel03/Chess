@@ -21,7 +21,7 @@ public class ChessBoardTest {
         ISquareBox iSquareBox = iChessBoard.getSqureBox(8,7);
     }
 
-    @Test(expected = Exception.class)
+    @Test
     public void getSqureBoxTest() throws Exception {
         IBoardFactory iBoardFactory =new BoardFactory();
         IChessBoard iChessBoard= iBoardFactory.createChessboard();

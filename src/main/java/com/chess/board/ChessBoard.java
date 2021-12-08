@@ -43,7 +43,7 @@ public class ChessBoard implements IChessBoard {
     }
 
     @Override
-    public void setPieceOnBoard(ICoordinates iCoordinates, IPiece iPiece) {
+    public void setPieceOnBoard(ICoordinates iCoordinates, IPiece iPiece) throws Exception {
         getSqureBox(iCoordinates.getCoordinateX(), iCoordinates.getCoordinateY()).setPiece(iPiece);
     }
 
