@@ -10,4 +10,5 @@ public class Utility {
     public static String KING = "King";
     public static String KNIGHT = "Knight";
     public static String BISHOP = "Bishop";
+    public static String ROOK = "Rook";
 }
