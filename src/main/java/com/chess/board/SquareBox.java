@@ -39,13 +39,5 @@ public class SquareBox implements ISquareBox {
         this.piece = piece;
     }
 
-    @Override
-    public boolean isOccupied() {
-        if (piece == null) {
-            return false;
-        }
-        return true;
-    }
-
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="com.chess.board.InitBoardTest" time="0.053" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="com.chess.board.InitBoardTest" time="0.015" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.2.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -60,8 +60,8 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.chess.board.InitBoardTest" name="initBoardClassNotNullTest" time="0.015"/>
-  <testcase classname="com.chess.board.InitBoardTest" name="initializeBlackPiecesTest" time="0.038"/>
+  <testcase classname="com.chess.board.InitBoardTest" name="initBoardClassNotNullTest" time="0"/>
+  <testcase classname="com.chess.board.InitBoardTest" name="initializeBlackPiecesTest" time="0.015"/>
   <testcase classname="com.chess.board.InitBoardTest" name="initializeWhitePiecesTest" time="0"/>
   <testcase classname="com.chess.board.InitBoardTest" name="initializeNewBoardTest" time="0"/>
 </testsuite>

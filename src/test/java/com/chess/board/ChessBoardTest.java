@@ -23,9 +23,9 @@ public class ChessBoardTest {
     @Test
     public void getSqureBoxTest() throws Exception {
         IBoardFactory boardFactory =new BoardFactory();
-        IChessBoard iChessBoard= boardFactory.createChessboard();
-        ISquareBox iSquareBox = null;
-        Assert.assertEquals(iSquareBox,iChessBoard.getSqureBox(TWO,THREE));
+        IChessBoard chessboard= boardFactory.createChessboard();
+        ISquareBox squareBox = null;
+        Assert.assertEquals(squareBox,chessboard.getSqureBox(TWO,THREE));
     }
 
     @Test

@@ -13,6 +13,4 @@ public interface ISquareBox {
 
     ICoordinates getCoordinates();
 
-    boolean isOccupied();
-
 }

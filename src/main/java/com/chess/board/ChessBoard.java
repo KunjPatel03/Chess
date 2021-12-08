@@ -41,12 +41,9 @@ public class ChessBoard implements IChessBoard {
     }
 
     @Override
-    public void setPieceOnBoard(ICoordinates iCoordinates, IPiece iPiece) throws Exception {
-        getSqureBox(iCoordinates.getCoordinateX(), iCoordinates.getCoordinateY()).setPiece(iPiece);
+    public void setPieceOnBoard(ICoordinates coordinates, IPiece piece) {
+        getSqureBox(coordinates.getCoordinateX(), coordinates.getCoordinateY()).setPiece(piece);
     }
 
-    public void printChessBoard() {
-        boardFactory.createShowBoard().displayBoard(squareBoxes);
-    }
 
 }
