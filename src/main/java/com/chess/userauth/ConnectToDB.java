@@ -1,8 +1,11 @@
 package com.chess.userauth;
 
+import com.chess.userauth.interfaces.IConnectToDB;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.*;
+import java.sql.SQLException;
+
 /**
  * @author Het Ketanbhai Shah
  */
@@ -24,18 +27,6 @@ public class ConnectToDB implements IConnectToDB {
     }
 }
 
-            /*Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(QUERY);
-            ResultSetMetaData metadata = rs.getMetaData();
-            int columnCount = metadata.getColumnCount();
 
-            while (rs.next()) {
-                for (int i = 1; i <= columnCount; i++) {
-                    System.out.println(rs.getString(i));
-                }
-            }
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-        }*/
 
 

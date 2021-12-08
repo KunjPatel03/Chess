@@ -1,4 +1,5 @@
-import com.chess.userauth.*;
+import com.chess.userauth.UserAuthFactory;
+import com.chess.userauth.interfaces.IUserAuthFactory;
 
 /**
  * @author Het Ketanbhai Shah
@@ -6,7 +7,7 @@ import com.chess.userauth.*;
 
 public class Main {
     public static void main(String args[]) {
-        IHome home = new Home();
-        home.indexPart();
+        IUserAuthFactory userAuthFactory = new UserAuthFactory();
+        userAuthFactory.createHome().indexPart();
     }
 }

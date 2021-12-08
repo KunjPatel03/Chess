@@ -1,6 +1,10 @@
 package com.chess.userauth;
 
+import com.chess.userauth.interfaces.IHome;
+import com.chess.userauth.interfaces.IUserAuthFactory;
+
 import java.util.Scanner;
+
 /**
  * @author Het Ketanbhai Shah
  */
@@ -8,21 +12,22 @@ import java.util.Scanner;
 public class Home implements IHome {
     @Override
     public void indexPart() {
+        IUserAuthFactory userAuthFactory = new UserAuthFactory();
         Scanner reader = new Scanner(System.in);
-        System.out.println("Hello and welcome to the Chess!");
-        System.out.println();
-        System.out.println("Press 1 for Registration and Press 2 for Login");
-        System.out.print("Enter - ");
-        int n = reader.nextInt();
-        switch (n) {
+
+        // Display Message
+        userAuthFactory.createHomeDisplay().getWelcomeMessage();
+
+        int userInput = reader.nextInt();
+        switch (userInput) {
             case 1:
-                IRegistration reg = new Registration();
-                reg.userRegistration();
+                userAuthFactory.createRegistration().userRegistration();
                 break;
             case 2:
-                ILogin login = new Login();
-                login.userLogin();
+                userAuthFactory.createLogin().userLogin();
                 break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + userInput);
         }
     }
 }

@@ -1,13 +1,20 @@
 package com.chess.userauth;
 
-import java.sql.*;
-import java.util.Scanner;
+import com.chess.userauth.interfaces.ILogin;
+import com.chess.userauth.interfaces.IUserAuthFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  * @author Het Ketanbhai Shah
  */
 
 public class Login implements ILogin {
+    IUserAuthFactory userAuthFactory = new UserAuthFactory();
+
     String userId;
     String password;
 
@@ -28,28 +35,19 @@ public class Login implements ILogin {
     }
 
     public void userLogin() {
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Enter your ID and Password for Login");
-        System.out.print("Enter User ID - ");
-        userId = reader.nextLine();
-        setUserId(userId);
-        System.out.print("Enter Password - ");
-        password = reader.nextLine();
-        setPassword(password);
-        if (authenticate()) {
-            System.out.println("Welcome to the Chess! You're logged in");
-
+        userAuthFactory.createLoginIO().getCredentials();
+        if (authenticated()) {
+            userAuthFactory.createLoginDisplay().getLoginSuccessMessage();
         } else {
-            System.out.println("Either userid or password is incorrect!");
+            userAuthFactory.createLoginDisplay().getLoginFailureMessage();
             userLogin();
         }
     }
 
-    public boolean authenticate() {
+    public boolean authenticated() {
         String QUERY = "SELECT count(*) as userCount FROM CSCI5308_26_DEVINT.Users where UserID =? and Password =?";
         Connection conn;
-        IConnectToDB connect = new ConnectToDB();
-        conn = connect.getConnection();
+        conn = userAuthFactory.createConnectToDB().getConnection();
         ResultSet rs = null;
         PreparedStatement preparedStmt = null;
         try {

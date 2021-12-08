@@ -1,71 +1,75 @@
 package com.chess.userauth;
 
-import java.sql.*;
-import java.util.Scanner;
+import com.chess.userauth.interfaces.IRegistration;
+import com.chess.userauth.interfaces.IUserAuthFactory;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 /**
  * @author Het Ketanbhai Shah
  */
 
 public class Registration implements IRegistration {
+
+    IUserAuthFactory userAuthFactory = new UserAuthFactory();
+
     String playerName;
     String userId;
     String password;
 
+    @Override
     public String getPlayerName() {
         return playerName;
     }
 
+    @Override
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
     }
 
+    @Override
     public String getUserId() {
         return userId;
     }
 
+    @Override
     public void setUserId(String userId) {
         this.userId = userId;
     }
 
+    @Override
     public String getPassword() {
         return password;
     }
 
+    @Override
     public void setPassword(String password) {
         this.password = password;
     }
 
     public void userRegistration() {
 
-        IHome home = new Home();
 
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Enter your Name, ID and password for Registration");
-        System.out.print("Enter your name- ");
-        playerName = reader.nextLine();
-        setPlayerName(playerName);
-        System.out.print("Enter User ID - ");
-        userId = reader.nextLine();
-        setUserId(userId);
-        System.out.print("Enter Password - ");
-        password = reader.nextLine();
-        setPassword(password);
-        if (insertData()) {
-            System.out.println("Thanks for the registration! You can login now");
-            home.indexPart();
+        // Getting user details in input
+        userAuthFactory.createRegistrationIO().getDetails();
+
+        if (isDataInserted()) {
+            userAuthFactory.createRegistrationDisplay().getRegSuccessMessage();
+            userAuthFactory.createHome().indexPart();
         } else {
-            System.out.println("Something wrong with the values you have entered. Please try to register again");
+            userAuthFactory.createRegistrationDisplay().getRegFailureMessage();
             userRegistration();
         }
     }
 
-    public boolean insertData() {
+    public boolean isDataInserted() {
+
         String QUERY = "INSERT INTO `CSCI5308_26_DEVINT`.`Users` (`UserName`, `UserID`, `Password`) VALUES (?,?,?)";
 
         Connection conn;
-        IConnectToDB connect = new ConnectToDB();
-        conn = connect.getConnection();
+        conn = userAuthFactory.createConnectToDB().getConnection();
         PreparedStatement preparedStmt = null;
         try {
             preparedStmt = conn.prepareStatement(QUERY);

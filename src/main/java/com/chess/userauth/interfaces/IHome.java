@@ -1,4 +1,4 @@
-package com.chess.userauth;
+package com.chess.userauth.interfaces;
 
 /**
  * @author Het Ketanbhai Shah
