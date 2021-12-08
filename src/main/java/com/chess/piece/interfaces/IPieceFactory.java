@@ -10,5 +10,6 @@ import com.chess.board.interfaces.ICoordinates;
 public interface IPieceFactory {
     ICoordinates createCoordinates(int xCoordinate, int yCoordinate);
     IPieceExistence createPieceExistence(boolean pieceExistence);
-    ICoordinateDistance createCoordinateDistance(SquareBox startPosition, SquareBox endPosition);
+    ICalculateXDistance createXDistance(SquareBox startPosition, SquareBox endPosition);
+    ICalculateYDistance createYDistance(SquareBox startPosition, SquareBox endPosition);
 }

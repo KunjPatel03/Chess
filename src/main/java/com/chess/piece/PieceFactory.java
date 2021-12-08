@@ -3,9 +3,7 @@ package com.chess.piece;
 import com.chess.board.Coordinates;
 import com.chess.board.SquareBox;
 import com.chess.board.interfaces.ICoordinates;
-import com.chess.piece.interfaces.ICoordinateDistance;
-import com.chess.piece.interfaces.IPieceExistence;
-import com.chess.piece.interfaces.IPieceFactory;
+import com.chess.piece.interfaces.*;
 
 /**
  * @author Sanjuna Konda
@@ -24,8 +22,12 @@ public class PieceFactory implements IPieceFactory {
     }
 
     @Override
-    public ICoordinateDistance createCoordinateDistance(SquareBox startPosition, SquareBox endPosition) {
-        return new CoordinateDistance(startPosition, endPosition );
+    public ICalculateXDistance createXDistance(SquareBox startPosition, SquareBox endPosition) {
+        return new CalculateXDistance(startPosition, endPosition);
     }
 
+    @Override
+    public ICalculateYDistance createYDistance(SquareBox startPosition, SquareBox endPosition) {
+        return new CalculateYDistance(startPosition, endPosition);
+    }
 }

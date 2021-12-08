@@ -3,7 +3,7 @@ package com.chess.piece;
 import com.chess.board.SquareBox;
 import com.chess.board.interfaces.IBoard;
 import com.chess.board.interfaces.ICoordinates;
-import com.chess.piece.interfaces.IKnight;
+import com.chess.piece.interfaces.IBishop;
 import com.chess.piece.interfaces.IPieceExistence;
 import com.chess.utilities.Utility;
 
@@ -11,19 +11,18 @@ import com.chess.utilities.Utility;
  * @author Sanjuna Konda
  */
 
-public class Knight extends Piece implements IKnight {
+public class Bishop extends Piece implements IBishop {
     private PieceFactory pieceFactory = new PieceFactory();
-    private int validCoordinateDistance;
     private int xDistance, yDistance;
     public Utility utility;
 
-    public Knight(ICoordinates iCoordinates, IPieceExistence pieceExistence, int color) {
+    public Bishop(ICoordinates iCoordinates, IPieceExistence pieceExistence, int color) {
         super(iCoordinates, pieceExistence, color);
     }
 
     @Override
     public String getPieceName(){
-        return utility.KNIGHT;
+        return utility.BISHOP;
     }
 
     @Override
@@ -33,8 +32,7 @@ public class Knight extends Piece implements IKnight {
         }
         xDistance = pieceFactory.createXDistance(startPosition, endPosition).calculateXDistanceValue();
         yDistance = pieceFactory.createYDistance(startPosition, endPosition).calculateYDistanceValue();
-        validCoordinateDistance = xDistance * yDistance;
-        if(validCoordinateDistance == utility.TWO) {
+        if(xDistance == yDistance) {
             return true;
         }
         return false;

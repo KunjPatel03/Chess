@@ -13,7 +13,8 @@ import com.chess.utilities.Utility;
 
 public class King extends Piece implements IKing {
     private PieceFactory pieceFactory = new PieceFactory();
-    private int coordinateDistance;
+    private int validCoordinateDistance;
+    int xDistance, yDistance;
     private boolean castlingDone = false;
     public Utility utility;
 
@@ -41,8 +42,12 @@ public class King extends Piece implements IKing {
         if(endPosition.getPiece().getPieceColor() == this.getPieceColor()) {
             return false;
         }
-        coordinateDistance = pieceFactory.createCoordinateDistance(startPosition, endPosition).calculateCoordinateDistance("King");
-        if(coordinateDistance == utility.ONE) {
+
+        xDistance = pieceFactory.createXDistance(startPosition, endPosition).calculateXDistanceValue();
+        yDistance = pieceFactory.createYDistance(startPosition, endPosition).calculateYDistanceValue();
+
+        validCoordinateDistance = xDistance + yDistance;
+        if(validCoordinateDistance == utility.ONE) {
             return true;
         }
         return false;
