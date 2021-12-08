@@ -37,7 +37,6 @@ public class ChessBoard implements IChessBoard {
 
     @Override
     public ISquareBox[][] initializeBoard() {
-
         iSquareBoxes = iBoardFactory.createInitBoard().initializeNewBoard(iSquareBoxes);
         return iSquareBoxes;
     }
@@ -49,7 +48,6 @@ public class ChessBoard implements IChessBoard {
 
     public void printChessBoard() {
         iBoardFactory.createShowBoard().displayBoard(iSquareBoxes);
-
     }
 
 }

@@ -50,5 +50,10 @@ public class BoardFactory implements IBoardFactory {
         return new ShowBoardDisplay();
     }
 
+    @Override
+    public IValidateCoordinate createValidateCoordinate() {
+        return new ValidateCoordinate();
+    }
+
 
 }

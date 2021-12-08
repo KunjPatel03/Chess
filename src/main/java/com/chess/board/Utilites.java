@@ -14,6 +14,7 @@ public final class Utilites {
     public static final int SIX = 6;
     public static final int SEVEN = 7;
     public static final int EIGHT = 8;
+    public static final int TEN = 10;
     public static final String WHITE_ROOK = "WRk";
     public static final String BLACK_ROOK = "BRk";
     public static final String WHITE_BISHOP = "WBi";

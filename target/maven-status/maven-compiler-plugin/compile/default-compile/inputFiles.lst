@@ -17,6 +17,7 @@ C:\GitProject\group26\src\main\java\com\chess\board\Coordinates.java
 C:\GitProject\group26\src\main\java\com\chess\piece\interfaces\IPiece.java
 C:\GitProject\group26\src\main\java\com\chess\piece\interfaces\IRook.java
 C:\GitProject\group26\src\main\java\com\chess\board\Utilites.java
+C:\GitProject\group26\src\main\java\com\chess\board\ValidateCoordinate.java
 C:\GitProject\group26\src\main\java\com\chess\piece\interfaces\IPawn.java
 C:\GitProject\group26\src\main\java\com\chess\piece\Queen.java
 C:\GitProject\group26\src\main\java\com\chess\board\BoardFactory.java
@@ -25,6 +26,7 @@ C:\GitProject\group26\src\main\java\com\chess\board\InitBoard.java
 C:\GitProject\group26\src\main\java\com\chess\board\interfaces\IBoardFactory.java
 C:\GitProject\group26\src\main\java\com\chess\board\interfaces\IShowBoard.java
 C:\GitProject\group26\src\main\java\com\chess\piece\King.java
+C:\GitProject\group26\src\main\java\com\chess\board\interfaces\IValidateCoordinate.java
 C:\GitProject\group26\src\main\java\com\chess\piece\PieceFactory.java
 C:\GitProject\group26\src\main\java\com\chess\board\interfaces\IChessBoard.java
 C:\GitProject\group26\src\main\java\com\chess\Main.java

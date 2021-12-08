@@ -6,7 +6,7 @@ import com.chess.board.interfaces.ISquareBox;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static com.chess.board.Utilites.*;
 
 /**
  * @author Kunj Vijaykumar Patel
@@ -17,8 +17,7 @@ public class ChessBoardTest {
     public void getSqureBoxCheckExceptionTest() throws Exception {
         IBoardFactory iBoardFactory =new BoardFactory();
         IChessBoard iChessBoard= iBoardFactory.createChessboard();
-
-        ISquareBox iSquareBox = iChessBoard.getSqureBox(8,7);
+        iChessBoard.getSqureBox(EIGHT,SEVEN);
     }
 
     @Test
@@ -26,6 +25,6 @@ public class ChessBoardTest {
         IBoardFactory iBoardFactory =new BoardFactory();
         IChessBoard iChessBoard= iBoardFactory.createChessboard();
         ISquareBox iSquareBox = null;
-        Assert.assertEquals(iSquareBox,iChessBoard.getSqureBox(2,3));
+        Assert.assertEquals(iSquareBox,iChessBoard.getSqureBox(TWO,THREE));
     }
 }

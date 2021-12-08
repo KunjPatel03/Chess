@@ -20,16 +20,6 @@ public class Coordinates implements ICoordinates {
 
 
     @Override
-    public boolean isCoordinateValid() {
-        if ((coordinateX >= ZERO && coordinateX < EIGHT)
-                && (coordinateY >= ZERO && coordinateY < EIGHT)) {
-            return true;
-        }else {
-            return false;
-        }
-    }
-
-    @Override
     public int getCoordinateX() {
         return coordinateX;
     }

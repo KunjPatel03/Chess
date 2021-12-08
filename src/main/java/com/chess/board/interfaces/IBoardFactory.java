@@ -23,4 +23,6 @@ public interface IBoardFactory {
     IInitBoard createInitBoard();
 
     IShowBoardDisplay createShowBoardDisplay();
+
+    IValidateCoordinate createValidateCoordinate();
 }

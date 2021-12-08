@@ -25,10 +25,8 @@ public class InitBoard implements IInitBoard {
                 iSquareBoxes[x][y] = iBoardFactory.createSqureBox(iBoardFactory.createCoordinates(x, y));
             }
         }
-
         iSquareBoxes = initializeBlackPieces(iSquareBoxes);
         iSquareBoxes = initializeWhitePieces(iSquareBoxes);
-
         return iSquareBoxes;
     }
 
