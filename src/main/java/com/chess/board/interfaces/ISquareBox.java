@@ -1,7 +1,5 @@
 package com.chess.board.interfaces;
 
-import com.chess.board.Coordinates;
-import com.chess.piece.Piece;
 import com.chess.piece.interfaces.IPiece;
 
 /**
@@ -15,6 +13,6 @@ public interface ISquareBox {
 
     ICoordinates getCoordinates();
 
-    public boolean isOccupied();
+    boolean isOccupied();
 
 }

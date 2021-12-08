@@ -1,7 +1,6 @@
 package com.chess.board.interfaces;
 
-import com.chess.board.Coordinates;
-import com.chess.piece.Piece;
+import com.chess.board.display.interfaces.IShowBoardDisplay;
 import com.chess.piece.interfaces.IPiece;
 
 /**
@@ -13,6 +12,8 @@ public interface IBoardFactory {
 
     ISquareBox createSqureBox(ICoordinates iCoordinates);
 
+    ISquareBox[][] createSqureBoxes(int size);
+
     ICoordinates createCoordinates(int xCoordinate, int yCoordinate);
 
     IChessBoard createChessboard();
@@ -20,4 +21,6 @@ public interface IBoardFactory {
     IShowBoard createShowBoard();
 
     IInitBoard createInitBoard();
+
+    IShowBoardDisplay createShowBoardDisplay();
 }

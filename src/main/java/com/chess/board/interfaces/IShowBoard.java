@@ -5,6 +5,6 @@ package com.chess.board.interfaces;
  */
 public interface IShowBoard {
 
-    public void displayBoard(ISquareBox[][] squareBoxes);
+    void displayBoard(ISquareBox[][] squareBoxes);
 
 }

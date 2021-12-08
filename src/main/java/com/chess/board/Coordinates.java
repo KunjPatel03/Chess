@@ -2,6 +2,9 @@ package com.chess.board;
 
 import com.chess.board.interfaces.ICoordinates;
 
+import static com.chess.board.Utilites.EIGHT;
+import static com.chess.board.Utilites.ZERO;
+
 /**
  * @author Kunj Vijaykumar Patel
  */
@@ -18,13 +21,12 @@ public class Coordinates implements ICoordinates {
 
     @Override
     public boolean isCoordinateValid() {
-        if ((coordinateX >= 0 && coordinateX < 8)
-                && (coordinateY >= 0 && coordinateY < 8)) {
+        if ((coordinateX >= ZERO && coordinateX < EIGHT)
+                && (coordinateY >= ZERO && coordinateY < EIGHT)) {
             return true;
         }else {
             return false;
         }
-
     }
 
     @Override
@@ -34,7 +36,7 @@ public class Coordinates implements ICoordinates {
 
     @Override
     public void setCoordinateX(int x) {
-        this.coordinateX=coordinateX;
+        this.coordinateX=x;
     }
 
     @Override
