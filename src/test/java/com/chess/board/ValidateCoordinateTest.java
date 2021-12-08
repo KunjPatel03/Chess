@@ -13,13 +13,19 @@ public class ValidateCoordinateTest {
 
     @Test
     public void isCoordinateValidTest() {
-        IBoardFactory iBoardFactory =new BoardFactory();
-        Assert.assertTrue(iBoardFactory.createValidateCoordinate().isCoordinateValid(iBoardFactory.createCoordinates(TWO,SEVEN)));
+        IBoardFactory boardFactory =new BoardFactory();
+        Assert.assertTrue(boardFactory.createValidateCoordinate().isCoordinateValid(boardFactory.createCoordinates(TWO,SEVEN)));
     }
 
     @Test
     public void isCoordinateNotValidTest() {
-        IBoardFactory iBoardFactory =new BoardFactory();
-        Assert.assertFalse(iBoardFactory.createValidateCoordinate().isCoordinateValid(iBoardFactory.createCoordinates(TWO,TEN)));
+        IBoardFactory boardFactory =new BoardFactory();
+        Assert.assertFalse(boardFactory.createValidateCoordinate().isCoordinateValid(boardFactory.createCoordinates(TWO,TEN)));
+    }
+
+    @Test
+    public void validateCoordinateClassNotNullTest(){
+        IBoardFactory boardFactory =new BoardFactory();
+        Assert.assertNotNull(boardFactory.createValidateCoordinate());
     }
 }

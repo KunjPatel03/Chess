@@ -5,9 +5,8 @@ import com.chess.board.interfaces.IChessBoard;
 import com.chess.board.interfaces.ICoordinates;
 import com.chess.board.interfaces.ISquareBox;
 import com.chess.piece.interfaces.IPiece;
-import static com.chess.board.Utilites.ZERO;
-import static com.chess.board.Utilites.SEVEN;
-import static com.chess.board.Utilites.EIGHT;
+
+import static com.chess.board.Utilites.*;
 
 /**
  * @author Kunj Vijaykumar Patel
@@ -15,30 +14,30 @@ import static com.chess.board.Utilites.EIGHT;
 
 public class ChessBoard implements IChessBoard {
 
-    private IBoardFactory iBoardFactory;
-    private ISquareBox[][] iSquareBoxes;
+    private IBoardFactory boardFactory;
+    private ISquareBox[][] squareBoxes;
 
     public ChessBoard() {
-        this.iBoardFactory=new BoardFactory();
-        this.iSquareBoxes = iBoardFactory.createSqureBoxes(EIGHT);
+        this.boardFactory =new BoardFactory();
+        this.squareBoxes = boardFactory.createSqureBoxes(EIGHT);
     }
 
     @Override
     public ISquareBox getSqureBox(int x, int y) {
         try {
             if (x < ZERO || x > SEVEN || y < ZERO || y > SEVEN) {
-                throw new Exception("Wrong input");
+                throw new Exception(WRONG_INPUT);
             }
         } catch (Exception exception) {
-            System.out.println(exception);
+            boardFactory.createShowBoardDisplay().displayMessage(exception.getMessage());
         }
-        return iSquareBoxes[x][y];
+        return squareBoxes[x][y];
     }
 
     @Override
     public ISquareBox[][] initializeBoard() {
-        iSquareBoxes = iBoardFactory.createInitBoard().initializeNewBoard(iSquareBoxes);
-        return iSquareBoxes;
+        squareBoxes = boardFactory.createInitBoard().initializeNewBoard(squareBoxes);
+        return squareBoxes;
     }
 
     @Override
@@ -47,7 +46,7 @@ public class ChessBoard implements IChessBoard {
     }
 
     public void printChessBoard() {
-        iBoardFactory.createShowBoard().displayBoard(iSquareBoxes);
+        boardFactory.createShowBoard().displayBoard(squareBoxes);
     }
 
 }

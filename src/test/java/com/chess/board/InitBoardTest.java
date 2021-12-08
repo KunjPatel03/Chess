@@ -16,21 +16,27 @@ public class InitBoardTest {
 
     @Test
     public void initializeNewBoardTest() {
-        IBoardFactory iBoardFactory =new BoardFactory();
-        Assert.assertNotNull(iBoardFactory.createInitBoard().initializeNewBoard(iBoardFactory.createSqureBoxes(EIGHT)));
+        IBoardFactory boardFactory =new BoardFactory();
+        Assert.assertNotNull(boardFactory.createInitBoard().initializeNewBoard(boardFactory.createSqureBoxes(EIGHT)));
     }
 
     @Test
     public void initializeWhitePiecesTest() {
-        IBoardFactory iBoardFactory =new BoardFactory();
-        ISquareBox[][] iSquareBoxes = iBoardFactory.createInitBoard().initializeNewBoard(iBoardFactory.createSqureBoxes(EIGHT));
-        Assert.assertNotNull(iBoardFactory.createInitBoard().initializeBlackPieces(iSquareBoxes));
+        IBoardFactory boardFactory =new BoardFactory();
+        ISquareBox[][] squareBoxes = boardFactory.createInitBoard().initializeNewBoard(boardFactory.createSqureBoxes(EIGHT));
+        Assert.assertNotNull(boardFactory.createInitBoard().initializeBlackPieces(squareBoxes));
     }
 
     @Test
     public void initializeBlackPiecesTest() {
-        IBoardFactory iBoardFactory =new BoardFactory();
-        ISquareBox[][] iSquareBoxes = iBoardFactory.createInitBoard().initializeNewBoard(iBoardFactory.createSqureBoxes(EIGHT));
-        Assert.assertNotNull(iBoardFactory.createInitBoard().initializeWhitePieces(iSquareBoxes));
+        IBoardFactory boardFactory =new BoardFactory();
+        ISquareBox[][] squareBoxes = boardFactory.createInitBoard().initializeNewBoard(boardFactory.createSqureBoxes(EIGHT));
+        Assert.assertNotNull(boardFactory.createInitBoard().initializeWhitePieces(squareBoxes));
+    }
+
+    @Test
+    public void initBoardClassNotNullTest(){
+        IBoardFactory boardFactory =new BoardFactory();
+        Assert.assertNotNull(boardFactory.createInitBoard());
     }
 }

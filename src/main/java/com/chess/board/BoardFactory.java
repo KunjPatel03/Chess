@@ -12,13 +12,13 @@ import com.chess.piece.interfaces.IPiece;
 public class BoardFactory implements IBoardFactory {
 
     @Override
-    public ISquareBox createSqureBox(ICoordinates iCoordinates, IPiece iPiece) {
-        return new SquareBox(iCoordinates,iPiece);
+    public ISquareBox createSqureBox(ICoordinates coordinates, IPiece piece) {
+        return new SquareBox(coordinates,piece);
     }
 
     @Override
-    public ISquareBox createSqureBox(ICoordinates iCoordinates) {
-        return new SquareBox(iCoordinates);
+    public ISquareBox createSqureBox(ICoordinates coordinates) {
+        return new SquareBox(coordinates);
     }
 
     public ISquareBox[][] createSqureBoxes(int size) {
@@ -54,6 +54,5 @@ public class BoardFactory implements IBoardFactory {
     public IValidateCoordinate createValidateCoordinate() {
         return new ValidateCoordinate();
     }
-
 
 }

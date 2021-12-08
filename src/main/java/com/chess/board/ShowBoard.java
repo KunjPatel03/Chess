@@ -12,31 +12,31 @@ import static com.chess.board.Utilites.ZERO;
  */
 public class ShowBoard implements IShowBoard {
 
-    private IBoardFactory iBoardFactory = new BoardFactory();
+    private IBoardFactory boardFactory = new BoardFactory();
 
     @Override
-    public void displayBoard(ISquareBox[][] iSquareBoxes) {
+    public void displayBoard(ISquareBox[][] squareBoxes) {
 
-        iBoardFactory.createShowBoardDisplay().displayOuterLines();
+        boardFactory.createShowBoardDisplay().displayOuterLines();
 
         for (int xCord = ZERO; xCord < EIGHT; xCord++) {
 
-            iBoardFactory.createShowBoardDisplay().displayVerticalIndex(xCord);
+            boardFactory.createShowBoardDisplay().displayVerticalIndex(xCord);
 
             for (int yCord = ZERO; yCord < EIGHT; yCord++) {
-                if (iSquareBoxes[xCord][yCord].getPiece() == null) {
-                    iBoardFactory.createShowBoardDisplay().displaySingleSpace();
-                    iBoardFactory.createShowBoardDisplay().displayPipe();
+                if (squareBoxes[xCord][yCord].getPiece() == null) {
+                    boardFactory.createShowBoardDisplay().displaySingleSpace();
+                    boardFactory.createShowBoardDisplay().displayPipe();
                 } else {
-                    iBoardFactory.createShowBoardDisplay().displayMessage(iSquareBoxes[xCord][yCord].getPiece().getPieceName());
-                    iBoardFactory.createShowBoardDisplay().displayPipe();
+                    boardFactory.createShowBoardDisplay().displayMessage(squareBoxes[xCord][yCord].getPiece().getPieceName());
+                    boardFactory.createShowBoardDisplay().displayPipe();
                 }
             }
             if (xCord < EIGHT) {
-                iBoardFactory.createShowBoardDisplay().displayEmptyLine();
-                iBoardFactory.createShowBoardDisplay().displaySqureLines();
+                boardFactory.createShowBoardDisplay().displayEmptyLine();
+                boardFactory.createShowBoardDisplay().displaySqureLines();
             }
         }
-        iBoardFactory.createShowBoardDisplay().displayHorizontalIndex();
+        boardFactory.createShowBoardDisplay().displayHorizontalIndex();
     }
 }

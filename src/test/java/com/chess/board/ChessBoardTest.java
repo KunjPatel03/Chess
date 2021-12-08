@@ -15,16 +15,22 @@ public class ChessBoardTest {
 
     @Test(expected = Exception.class)
     public void getSqureBoxCheckExceptionTest() throws Exception {
-        IBoardFactory iBoardFactory =new BoardFactory();
-        IChessBoard iChessBoard= iBoardFactory.createChessboard();
+        IBoardFactory boardFactory =new BoardFactory();
+        IChessBoard iChessBoard= boardFactory.createChessboard();
         iChessBoard.getSqureBox(EIGHT,SEVEN);
     }
 
     @Test
     public void getSqureBoxTest() throws Exception {
-        IBoardFactory iBoardFactory =new BoardFactory();
-        IChessBoard iChessBoard= iBoardFactory.createChessboard();
+        IBoardFactory boardFactory =new BoardFactory();
+        IChessBoard iChessBoard= boardFactory.createChessboard();
         ISquareBox iSquareBox = null;
         Assert.assertEquals(iSquareBox,iChessBoard.getSqureBox(TWO,THREE));
+    }
+
+    @Test
+    public void chessBoardClassNotNull(){
+        IBoardFactory boardFactory =new BoardFactory();
+        Assert.assertNotNull(boardFactory.createChessboard());
     }
 }

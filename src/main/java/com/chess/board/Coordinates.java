@@ -2,8 +2,6 @@ package com.chess.board;
 
 import com.chess.board.interfaces.ICoordinates;
 
-import static com.chess.board.Utilites.EIGHT;
-import static com.chess.board.Utilites.ZERO;
 
 /**
  * @author Kunj Vijaykumar Patel
@@ -15,9 +13,8 @@ public class Coordinates implements ICoordinates {
 
     public Coordinates(int x, int y) {
         setCoordinateX(x);
-        setCoordinateX(y);
+        setCoordinateY(y);
     }
-
 
     @Override
     public int getCoordinateX() {

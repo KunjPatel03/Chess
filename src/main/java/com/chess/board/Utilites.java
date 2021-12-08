@@ -27,6 +27,7 @@ public final class Utilites {
     public static final String BLACK_QUEEN = "BQn";
     public static final String WHITE_PAWN = "WPn";
     public static final String BLACK_PAWN = "BPn";
+    public static final String WRONG_INPUT = "Wrong input";
 
 
 }

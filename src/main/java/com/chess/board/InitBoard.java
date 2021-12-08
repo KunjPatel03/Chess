@@ -15,55 +15,55 @@ import static com.chess.board.Utilites.*;
  */
 public class InitBoard implements IInitBoard {
 
-    private IBoardFactory iBoardFactory = new BoardFactory();
-    private IPieceFactory iPieceFactory = new PieceFactory();
+    private IBoardFactory boardFactory = new BoardFactory();
+    private IPieceFactory pieceFactory = new PieceFactory();
 
     @Override
-    public ISquareBox[][] initializeNewBoard(ISquareBox[][] iSquareBoxes) {
+    public ISquareBox[][] initializeNewBoard(ISquareBox[][] squareBoxes) {
         for (int x = ZERO; x < EIGHT; x++) {
             for (int y = ZERO; y < EIGHT; y++) {
-                iSquareBoxes[x][y] = iBoardFactory.createSqureBox(iBoardFactory.createCoordinates(x, y));
+                squareBoxes[x][y] = boardFactory.createSqureBox(boardFactory.createCoordinates(x, y));
             }
         }
-        iSquareBoxes = initializeBlackPieces(iSquareBoxes);
-        iSquareBoxes = initializeWhitePieces(iSquareBoxes);
-        return iSquareBoxes;
+        squareBoxes = initializeBlackPieces(squareBoxes);
+        squareBoxes = initializeWhitePieces(squareBoxes);
+        return squareBoxes;
     }
 
     @Override
-    public ISquareBox[][] initializeWhitePieces(ISquareBox[][] iSquareBoxes) {
+    public ISquareBox[][] initializeWhitePieces(ISquareBox[][] squareBoxes) {
 
-        iSquareBoxes[ZERO][ZERO].setPiece((IPiece) iPieceFactory.createRook(WHITE_ROOK));
-        iSquareBoxes[ZERO][SEVEN].setPiece((IPiece) iPieceFactory.createRook(WHITE_ROOK));
-        iSquareBoxes[ZERO][ONE].setPiece((IPiece) iPieceFactory.createKnight(WHITE_KNIGHT));
-        iSquareBoxes[ZERO][SIX].setPiece((IPiece) iPieceFactory.createKnight(WHITE_KNIGHT));
-        iSquareBoxes[ZERO][TWO].setPiece((IPiece) iPieceFactory.createBishop(WHITE_BISHOP));
-        iSquareBoxes[ZERO][FIVE].setPiece((IPiece) iPieceFactory.createBishop(WHITE_BISHOP));
-        iSquareBoxes[ZERO][THREE].setPiece((IPiece) iPieceFactory.createQueen(WHITE_QUEEN));
-        iSquareBoxes[ZERO][FOUR].setPiece((IPiece) iPieceFactory.createKing(WHITE_KING));
+        squareBoxes[ZERO][ZERO].setPiece((IPiece) pieceFactory.createRook(WHITE_ROOK));
+        squareBoxes[ZERO][SEVEN].setPiece((IPiece) pieceFactory.createRook(WHITE_ROOK));
+        squareBoxes[ZERO][ONE].setPiece((IPiece) pieceFactory.createKnight(WHITE_KNIGHT));
+        squareBoxes[ZERO][SIX].setPiece((IPiece) pieceFactory.createKnight(WHITE_KNIGHT));
+        squareBoxes[ZERO][TWO].setPiece((IPiece) pieceFactory.createBishop(WHITE_BISHOP));
+        squareBoxes[ZERO][FIVE].setPiece((IPiece) pieceFactory.createBishop(WHITE_BISHOP));
+        squareBoxes[ZERO][THREE].setPiece((IPiece) pieceFactory.createQueen(WHITE_QUEEN));
+        squareBoxes[ZERO][FOUR].setPiece((IPiece) pieceFactory.createKing(WHITE_KING));
         for (int index = ZERO; index < EIGHT; index++) {
-            iSquareBoxes[ONE][index].setPiece((IPiece) iPieceFactory.createPawn(WHITE_PAWN));
+            squareBoxes[ONE][index].setPiece((IPiece) pieceFactory.createPawn(WHITE_PAWN));
         }
 
-        return iSquareBoxes;
+        return squareBoxes;
     }
 
     @Override
-    public ISquareBox[][] initializeBlackPieces(ISquareBox[][] iSquareBoxes) {
+    public ISquareBox[][] initializeBlackPieces(ISquareBox[][] squareBoxes) {
 
-        iSquareBoxes[SEVEN][ZERO].setPiece((IPiece) iPieceFactory.createRook(BLACK_ROOK));
-        iSquareBoxes[SEVEN][SEVEN].setPiece((IPiece) iPieceFactory.createRook(BLACK_ROOK));
-        iSquareBoxes[SEVEN][TWO].setPiece((IPiece) iPieceFactory.createBishop(BLACK_BISHOP));
-        iSquareBoxes[SEVEN][FIVE].setPiece((IPiece) iPieceFactory.createBishop(BLACK_BISHOP));
-        iSquareBoxes[SEVEN][ONE].setPiece((IPiece) iPieceFactory.createKnight(BLACK_KNIGHT));
-        iSquareBoxes[SEVEN][SIX].setPiece((IPiece) iPieceFactory.createKnight(BLACK_KNIGHT));
-        iSquareBoxes[SEVEN][THREE].setPiece((IPiece) iPieceFactory.createQueen(BLACK_QUEEN));
-        iSquareBoxes[SEVEN][FOUR].setPiece((IPiece) iPieceFactory.createKing(BLACK_KING));
+        squareBoxes[SEVEN][ZERO].setPiece((IPiece) pieceFactory.createRook(BLACK_ROOK));
+        squareBoxes[SEVEN][SEVEN].setPiece((IPiece) pieceFactory.createRook(BLACK_ROOK));
+        squareBoxes[SEVEN][TWO].setPiece((IPiece) pieceFactory.createBishop(BLACK_BISHOP));
+        squareBoxes[SEVEN][FIVE].setPiece((IPiece) pieceFactory.createBishop(BLACK_BISHOP));
+        squareBoxes[SEVEN][ONE].setPiece((IPiece) pieceFactory.createKnight(BLACK_KNIGHT));
+        squareBoxes[SEVEN][SIX].setPiece((IPiece) pieceFactory.createKnight(BLACK_KNIGHT));
+        squareBoxes[SEVEN][THREE].setPiece((IPiece) pieceFactory.createQueen(BLACK_QUEEN));
+        squareBoxes[SEVEN][FOUR].setPiece((IPiece) pieceFactory.createKing(BLACK_KING));
         for (int index = ZERO; index < EIGHT; index++) {
-            iSquareBoxes[SIX][index].setPiece((IPiece) iPieceFactory.createPawn(BLACK_PAWN));
+            squareBoxes[SIX][index].setPiece((IPiece) pieceFactory.createPawn(BLACK_PAWN));
         }
 
-        return iSquareBoxes;
+        return squareBoxes;
     }
 
 }

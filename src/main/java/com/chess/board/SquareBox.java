@@ -12,36 +12,36 @@ import com.chess.piece.interfaces.IPiece;
  * @author Kunj Vijaykumar Patel
  */
 public class SquareBox implements ISquareBox {
-    private IBoardFactory iBoardFactory = new BoardFactory();
-    private IPiece iPiece;
-    private ICoordinates iCoordinates;
+    private IBoardFactory boardFactory = new BoardFactory();
+    private IPiece piece;
+    private ICoordinates coordinates;
 
-    public SquareBox(ICoordinates iCoordinates,IPiece iPiece){
-        this.iCoordinates = iCoordinates;
-        this.iPiece = iPiece;
+    public SquareBox(ICoordinates coordinates,IPiece piece){
+        this.coordinates = coordinates;
+        this.piece = piece;
     }
-    public SquareBox(ICoordinates iCoordinates){
-        this(iCoordinates,null);
+    public SquareBox(ICoordinates coordinates){
+        this(coordinates,null);
     }
 
     @Override
     public IPiece getPiece() {
-        return this.iPiece;
+        return this.piece;
     }
 
     @Override
     public ICoordinates getCoordinates() {
-        return iCoordinates;
+        return coordinates;
     }
 
     @Override
-    public void setPiece(IPiece iPiece) {
-        this.iPiece = iPiece;
+    public void setPiece(IPiece piece) {
+        this.piece = piece;
     }
 
     @Override
     public boolean isOccupied() {
-        if (iPiece == null) {
+        if (piece == null) {
             return false;
         }
         return true;
