@@ -12,4 +12,5 @@ public class Utility {
     public static String BISHOP = "Bishop";
     public static String ROOK = "Rook";
     public static String QUEEN = "Queen";
+    public static String PAWN = "Pawn";
 }

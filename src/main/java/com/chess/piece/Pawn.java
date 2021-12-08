@@ -4,25 +4,24 @@ import com.chess.board.SquareBox;
 import com.chess.board.interfaces.IBoard;
 import com.chess.board.interfaces.ICoordinates;
 import com.chess.piece.interfaces.IPieceExistence;
-import com.chess.piece.interfaces.IQueen;
 import com.chess.utilities.Utility;
 
 /**
  * @author Sanjuna Konda
  */
 
-public class Queen extends Piece implements IQueen {
+public class Pawn extends Piece{
     private PieceFactory pieceFactory = new PieceFactory();
-    private Utility utility;
-    private int xDistance, yDistance;
+    public Utility utility;
+    private int yDistance;
 
-    public Queen(ICoordinates iCoordinates, IPieceExistence pieceExistence, int color) {
+    public Pawn(ICoordinates iCoordinates, IPieceExistence pieceExistence, int color) {
         super(iCoordinates, pieceExistence, color);
     }
 
     @Override
     public String getPieceName(){
-        return utility.QUEEN;
+        return utility.PAWN;
     }
 
     @Override
@@ -30,14 +29,8 @@ public class Queen extends Piece implements IQueen {
         if(endPosition.getPiece().getPieceColor() == this.getPieceColor()) {
             return false;
         }
-        xDistance = pieceFactory.createXDistance(startPosition, endPosition).calculateXDistanceValue();
         yDistance = pieceFactory.createYDistance(startPosition, endPosition).calculateYDistanceValue();
-        if(xDistance == yDistance) {
-            return true;
-        }
-        if(startPosition.getCoordinates().getXCoordinate() == endPosition.getCoordinates().getXCoordinate()) {
-            return true;
-        } else if(startPosition.getCoordinates().getYCoordinate() == endPosition.getCoordinates().getYCoordinate()) {
+        if(yDistance == utility.ONE || yDistance == utility.TWO) {
             return true;
         }
         return false;
