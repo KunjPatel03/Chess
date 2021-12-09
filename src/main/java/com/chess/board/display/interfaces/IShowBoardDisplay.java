@@ -3,6 +3,7 @@ package com.chess.board.display.interfaces;
 /**
  * @author Kunj Vijaykumar Patel
  */
+
 public interface IShowBoardDisplay {
     void displayOuterLines();
 

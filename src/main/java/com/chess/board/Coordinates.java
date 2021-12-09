@@ -2,7 +2,6 @@ package com.chess.board;
 
 import com.chess.board.interfaces.ICoordinates;
 
-
 /**
  * @author Kunj Vijaykumar Patel
  */

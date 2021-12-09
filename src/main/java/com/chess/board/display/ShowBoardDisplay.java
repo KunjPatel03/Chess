@@ -5,6 +5,7 @@ import com.chess.board.display.interfaces.IShowBoardDisplay;
 /**
  * @author Kunj Vijaykumar Patel
  */
+
 public class ShowBoardDisplay implements IShowBoardDisplay {
     @Override
     public void displayOuterLines() {

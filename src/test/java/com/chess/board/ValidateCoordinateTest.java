@@ -9,6 +9,7 @@ import static com.chess.board.Utilites.*;
 /**
  * @author Kunj Vijaykumar Patel
  */
+
 public class ValidateCoordinateTest {
 
     @Test

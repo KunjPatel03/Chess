@@ -3,7 +3,6 @@ package com.chess.userauth;
 import com.chess.userauth.interfaces.IUserAuthFactory;
 import org.junit.Assert;
 import org.junit.Test;
-
 /**
  * @author Het Ketanbhai Shah
  */

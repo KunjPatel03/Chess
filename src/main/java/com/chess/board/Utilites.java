@@ -3,6 +3,7 @@ package com.chess.board;
 /**
  * @author Kunj Vijaykumar Patel
  */
+
 public final class Utilites {
 
     public static final int ZERO = 0;

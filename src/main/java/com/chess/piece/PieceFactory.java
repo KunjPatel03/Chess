@@ -5,6 +5,7 @@ import com.chess.piece.interfaces.*;
 /**
  * @author Kunj Vijaykumar Patel
  */
+
 public class PieceFactory implements IPieceFactory {
 
     @Override

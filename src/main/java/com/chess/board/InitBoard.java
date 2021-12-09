@@ -8,10 +8,10 @@ import com.chess.piece.interfaces.IPieceFactory;
 
 import static com.chess.board.Utilites.*;
 
-
 /**
  * @author Kunj Vijaykumar Patel
  */
+
 public class InitBoard implements IInitBoard {
 
     private IBoardFactory boardFactory;
