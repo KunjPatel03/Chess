@@ -1,6 +1,5 @@
 package com.chess.userauth;
 
-import com.chess.userauth.interfaces.ILogin;
 import com.chess.userauth.interfaces.IUserAuthFactory;
 
 import java.sql.Connection;
@@ -14,8 +13,6 @@ import java.sql.SQLException;
 
 public class Login {
     IUserAuthFactory userAuthFactory = new UserAuthFactory();
-
-
 
 
     String userId;

@@ -6,8 +6,10 @@ import com.chess.userauth.interfaces.IUserAuthFactory;
  */
 
 public class Main {
+    private static IUserAuthFactory userAuthFactory = new UserAuthFactory();
+
     public static void main(String args[]) {
-        IUserAuthFactory userAuthFactory = new UserAuthFactory();
+
         userAuthFactory.createHome().indexPart();
     }
 }

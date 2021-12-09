@@ -1,5 +1,9 @@
 package com.chess.userauth.display;
 
+/**
+ * @author Het Ketanbhai Shah
+ */
+
 public class RegistrationDisplay implements com.chess.userauth.interfaces.IRegistrationDisplay {
 
     @Override
