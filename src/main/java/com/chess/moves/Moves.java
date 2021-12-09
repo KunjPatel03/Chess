@@ -1,15 +1,36 @@
 package com.chess.moves;
 
 
+import com.chess.moves.io.MovesIO;
+
+import java.util.HashMap;
+
 /**
  * @author Het Ketanbhai Shah
  */
 
 
 public class Moves {
-    public boolean canMove(String curPos, String desPos, Piece piece) {
-        curPos = "E2";
-        desPos = "E5";
+    public String getCurPos() {
+        return curPos;
+    }
+
+    public void setCurPos(String curPos) {
+        this.curPos = curPos;
+    }
+
+    public String getDesPos() {
+        return desPos;
+    }
+
+    public void setDesPos(String desPos) {
+        this.desPos = desPos;
+    }
+
+    String curPos;
+    String desPos;
+
+    public boolean canMove(String curPos, String desPos) {
         int curRow, curCol, destRow, destCol;
         curRow = inputToRow(curPos);
         curCol = inputToCol(curPos);
@@ -24,10 +45,19 @@ public class Moves {
         return false;
     }
 
-    private int inputToRow(String input) {
-        char r = input.charAt(1);
+    public void takeMovesInput() {
+        MovesIO movesIO = new MovesIO();
+        movesIO.movesInput(this);
+        System.out.println("Current Position");
+        System.out.println(inputToRow(getCurPos()) + " And " + inputToCol(getCurPos()));
+        System.out.println("Destination Position");
+        System.out.print(inputToRow(getDesPos()) + " And " + inputToCol(getDesPos()));
+    }
+
+    public int inputToRow(String input) {
+        char rowChar = input.charAt(1);
         int row;
-        switch (r) { // '0' value corresponds to '8', etc
+        switch (rowChar) { // '0' value corresponds to '8', etc
             case '8':
                 row = 0;
                 break;
@@ -60,11 +90,11 @@ public class Moves {
     }
 
     // convert String input into column integer
-    private int inputToCol(String input) {
-        char c = input.charAt(0);
-        c = Character.toLowerCase(c);
+    public int inputToCol(String input) {
+        char character = input.charAt(0);
+        character = Character.toLowerCase(character);
         int col;
-        switch (c) { // '0' value corresponds to 'a', etc
+        switch (character) { // '0' value corresponds to 'a', etc
             case 'a':
                 col = 0;
                 break;
