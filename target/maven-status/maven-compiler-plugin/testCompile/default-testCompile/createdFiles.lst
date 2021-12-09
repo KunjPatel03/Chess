@@ -1,0 +1,4 @@
+com\chess\MainTest.class
+com\chess\board\InitBoardTest.class
+com\chess\board\ValidateCoordinateTest.class
+com\chess\board\ChessBoardTest.class
