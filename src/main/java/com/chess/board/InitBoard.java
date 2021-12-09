@@ -42,16 +42,16 @@ public class InitBoard implements IInitBoard {
     @Override
     public ISquareBox[][] initializeWhitePieces(ISquareBox[][] squareBoxes) {
 
-        squareBoxes[ZERO][ZERO].setPiece((IPiece) pieceFactory.createRook(WHITE_ROOK));
-        squareBoxes[ZERO][SEVEN].setPiece((IPiece) pieceFactory.createRook(WHITE_ROOK));
-        squareBoxes[ZERO][ONE].setPiece((IPiece) pieceFactory.createKnight(WHITE_KNIGHT));
-        squareBoxes[ZERO][SIX].setPiece((IPiece) pieceFactory.createKnight(WHITE_KNIGHT));
-        squareBoxes[ZERO][TWO].setPiece((IPiece) pieceFactory.createBishop(WHITE_BISHOP));
-        squareBoxes[ZERO][FIVE].setPiece((IPiece) pieceFactory.createBishop(WHITE_BISHOP));
-        squareBoxes[ZERO][THREE].setPiece((IPiece) pieceFactory.createQueen(WHITE_QUEEN));
-        squareBoxes[ZERO][FOUR].setPiece((IPiece) pieceFactory.createKing(WHITE_KING));
+        squareBoxes[ZERO][ZERO].setPiece((IPiece) pieceFactory.createRookPiece(WHITE_ROOK,WHITE));
+        squareBoxes[ZERO][SEVEN].setPiece((IPiece) pieceFactory.createRookPiece(WHITE_ROOK,WHITE));
+        squareBoxes[ZERO][ONE].setPiece((IPiece) pieceFactory.createKnightPiece(WHITE_KNIGHT,WHITE));
+        squareBoxes[ZERO][SIX].setPiece((IPiece) pieceFactory.createKnightPiece(WHITE_KNIGHT,WHITE));
+        squareBoxes[ZERO][TWO].setPiece((IPiece) pieceFactory.createBishopPiece(WHITE_BISHOP,WHITE));
+        squareBoxes[ZERO][FIVE].setPiece((IPiece) pieceFactory.createBishopPiece(WHITE_BISHOP,WHITE));
+        squareBoxes[ZERO][THREE].setPiece((IPiece) pieceFactory.createQueenPiece(WHITE_QUEEN,WHITE));
+        squareBoxes[ZERO][FOUR].setPiece((IPiece) pieceFactory.createKingPiece(WHITE_KING,WHITE));
         for (int index = ZERO; index < EIGHT; index++) {
-            squareBoxes[ONE][index].setPiece((IPiece) pieceFactory.createPawn(WHITE_PAWN));
+            squareBoxes[ONE][index].setPiece((IPiece) pieceFactory.createPawnPiece(WHITE_PAWN,WHITE));
         }
         return squareBoxes;
     }
@@ -59,16 +59,16 @@ public class InitBoard implements IInitBoard {
     @Override
     public ISquareBox[][] initializeBlackPieces(ISquareBox[][] squareBoxes) {
 
-        squareBoxes[SEVEN][ZERO].setPiece((IPiece) pieceFactory.createRook(BLACK_ROOK));
-        squareBoxes[SEVEN][SEVEN].setPiece((IPiece) pieceFactory.createRook(BLACK_ROOK));
-        squareBoxes[SEVEN][TWO].setPiece((IPiece) pieceFactory.createBishop(BLACK_BISHOP));
-        squareBoxes[SEVEN][FIVE].setPiece((IPiece) pieceFactory.createBishop(BLACK_BISHOP));
-        squareBoxes[SEVEN][ONE].setPiece((IPiece) pieceFactory.createKnight(BLACK_KNIGHT));
-        squareBoxes[SEVEN][SIX].setPiece((IPiece) pieceFactory.createKnight(BLACK_KNIGHT));
-        squareBoxes[SEVEN][THREE].setPiece((IPiece) pieceFactory.createQueen(BLACK_QUEEN));
-        squareBoxes[SEVEN][FOUR].setPiece((IPiece) pieceFactory.createKing(BLACK_KING));
+        squareBoxes[SEVEN][ZERO].setPiece((IPiece) pieceFactory.createRookPiece(BLACK_ROOK,BLACK));
+        squareBoxes[SEVEN][SEVEN].setPiece((IPiece) pieceFactory.createRookPiece(BLACK_ROOK,BLACK));
+        squareBoxes[SEVEN][TWO].setPiece((IPiece) pieceFactory.createBishopPiece(BLACK_BISHOP,BLACK));
+        squareBoxes[SEVEN][FIVE].setPiece((IPiece) pieceFactory.createBishopPiece(BLACK_BISHOP,BLACK));
+        squareBoxes[SEVEN][ONE].setPiece((IPiece) pieceFactory.createKnightPiece(BLACK_KNIGHT,BLACK));
+        squareBoxes[SEVEN][SIX].setPiece((IPiece) pieceFactory.createKnightPiece(BLACK_KNIGHT,BLACK));
+        squareBoxes[SEVEN][THREE].setPiece((IPiece) pieceFactory.createQueenPiece(BLACK_QUEEN,BLACK));
+        squareBoxes[SEVEN][FOUR].setPiece((IPiece) pieceFactory.createKingPiece(BLACK_KING,BLACK));
         for (int index = ZERO; index < EIGHT; index++) {
-            squareBoxes[SIX][index].setPiece((IPiece) pieceFactory.createPawn(BLACK_PAWN));
+            squareBoxes[SIX][index].setPiece((IPiece) pieceFactory.createPawnPiece(BLACK_PAWN,BLACK));
         }
         return squareBoxes;
     }

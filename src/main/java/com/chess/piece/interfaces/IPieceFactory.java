@@ -5,11 +5,16 @@ package com.chess.piece.interfaces;
  */
 public interface IPieceFactory {
 
-    IBishop createBishop(String name);
-    IKing createKing(String name);
-    IKnight createKnight(String name);
-    IPawn createPawn(String name);
-    IQueen createQueen(String name);
-    IRook createRook(String name);
+    IBishop createBishopPiece(String pieceName, String color);
+
+    IKing createKingPiece(String pieceName, String color);
+
+    IKnight createKnightPiece(String pieceName, String color);
+
+    IPawn createPawnPiece(String pieceName, String color);
+
+    IQueen createQueenPiece(String pieceName, String color);
+
+    IRook createRookPiece(String pieceName, String color);
 
 }

@@ -8,32 +8,34 @@ import com.chess.piece.interfaces.*;
 public class PieceFactory implements IPieceFactory {
 
     @Override
-    public IBishop createBishop(String name) {
-        return new Bishop(name);
+    public IBishop createBishopPiece(String pieceName, String color) {
+        return new Bishop(pieceName, color);
     }
 
     @Override
-    public IKing createKing(String name) {
-        return new King(name);
+    public IKing createKingPiece(String pieceName, String color) {
+        return new King(pieceName, color);
     }
 
     @Override
-    public IKnight createKnight(String name) {
-        return new Knight(name);
+    public IKnight createKnightPiece(String pieceName, String color) {
+        return new Knight(pieceName, color);
     }
 
     @Override
-    public IPawn createPawn(String name) {
-        return new Pawn(name);
+    public IPawn createPawnPiece(String pieceName, String color) {
+        return new Pawn(pieceName, color);
     }
 
     @Override
-    public IQueen createQueen(String name) {
-        return new Queen(name);
+    public IQueen createQueenPiece(String pieceName, String color) {
+        return new Queen(pieceName, color);
     }
 
     @Override
-    public IRook createRook(String name) {
-        return new Rook(name);
+    public IRook createRookPiece(String pieceName, String color) {
+        return new Rook(pieceName,color);
     }
+
+
 }

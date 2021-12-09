@@ -28,6 +28,8 @@ public final class Utilites {
     public static final String WHITE_PAWN = "WPn";
     public static final String BLACK_PAWN = "BPn";
     public static final String WRONG_INPUT = "Wrong input";
+    public static final String WHITE = "White";
+    public static final String BLACK = "Black";
 
 
 }
