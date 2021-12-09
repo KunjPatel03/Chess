@@ -1,9 +1,10 @@
 package com.chess.moves;
 
 
+import com.chess.board.BoardFactory;
+import com.chess.board.interfaces.IChessBoard;
+import com.chess.board.interfaces.ISquareBox;
 import com.chess.moves.io.MovesIO;
-
-import java.util.HashMap;
 
 /**
  * @author Het Ketanbhai Shah
@@ -29,6 +30,16 @@ public class Moves {
 
     String curPos;
     String desPos;
+    boolean contGame = true;
+
+    public boolean isContGame() {
+        return contGame;
+    }
+
+    public void setContGame(boolean contGame) {
+        this.contGame = contGame;
+    }
+
 
     public boolean canMove(String curPos, String desPos) {
         int curRow, curCol, destRow, destCol;
@@ -48,10 +59,24 @@ public class Moves {
     public void takeMovesInput() {
         MovesIO movesIO = new MovesIO();
         movesIO.movesInput(this);
-        System.out.println("Current Position");
-        System.out.println(inputToRow(getCurPos()) + " And " + inputToCol(getCurPos()));
-        System.out.println("Destination Position");
-        System.out.print(inputToRow(getDesPos()) + " And " + inputToCol(getDesPos()));
+
+    }
+
+    public void chessLoop(ISquareBox[][] squareBoxes) throws Exception {
+        while (contGame) {
+            takeMovesInput();
+            if (contGame == true) {
+                updateTheBoard(squareBoxes);
+            }
+
+        }
+    }
+
+    public void updateTheBoard(ISquareBox[][] squareBoxes) throws Exception {
+        BoardFactory boardFactory = new BoardFactory();
+        IChessBoard chessBoard = boardFactory.createChessboard();
+        squareBoxes = chessBoard.updateBoard(boardFactory.createCoordinates(inputToRow(getCurPos()), inputToCol(getCurPos())), boardFactory.createCoordinates(inputToRow(getDesPos()), inputToCol(getDesPos())), squareBoxes);
+        boardFactory.createShowBoard().displayBoard(squareBoxes);
     }
 
     public int inputToRow(String input) {

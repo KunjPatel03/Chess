@@ -48,8 +48,8 @@ public class ChessBoard implements IChessBoard {
 
     @Override
     public ISquareBox[][] updateBoard(ICoordinates currentPosition, ICoordinates nextPosition, ISquareBox[][] squareBoxes) throws Exception {
+        setPieceOnBoard(nextPosition,getSqureBox(currentPosition.getCoordinateX(),currentPosition.getCoordinateY(),squareBoxes).getPiece(),squareBoxes);
         getSqureBox(currentPosition.getCoordinateX(), currentPosition.getCoordinateY(),squareBoxes).setPiece(null);
-        setPieceOnBoard(nextPosition,getSqureBox(nextPosition.getCoordinateX(),nextPosition.getCoordinateY(),squareBoxes).getPiece(),squareBoxes);
         return squareBoxes;
     }
 
