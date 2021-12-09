@@ -7,9 +7,9 @@ package com.chess.userauth.interfaces;
 public interface ILogin {
     void userLogin();
 
-    String getUserId();
 
-    void setUserId(String userId);
+
+
 
     String getPassword();
 

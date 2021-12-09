@@ -13,6 +13,8 @@ public class Home implements IHome {
     @Override
     public void indexPart() {
         IUserAuthFactory userAuthFactory = new UserAuthFactory();
+        Login login = new Login();
+        Registration registration = new Registration();
         Scanner reader = new Scanner(System.in);
 
         // Display Message
@@ -21,10 +23,10 @@ public class Home implements IHome {
         int userInput = reader.nextInt();
         switch (userInput) {
             case 1:
-                userAuthFactory.createRegistration().userRegistration();
+                registration.userRegistration();
                 break;
             case 2:
-                userAuthFactory.createLogin().userLogin();
+                login.userLogin();
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + userInput);

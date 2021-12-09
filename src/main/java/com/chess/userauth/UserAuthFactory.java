@@ -7,21 +7,18 @@ import com.chess.userauth.interfaces.*;
 import com.chess.userauth.io.LoginIO;
 import com.chess.userauth.io.RegistrationIO;
 
+
 /**
  * @author Het Ketanbhai Shah
  */
 
-public class UserAuthFactory implements com.chess.userauth.interfaces.IUserAuthFactory {
+public class UserAuthFactory extends UserAuthAbstractFactory implements com.chess.userauth.interfaces.IUserAuthFactory {
 
     @Override
     public IHome createHome() {
         return new Home();
     }
 
-    @Override
-    public ILogin createLogin() {
-        return new Login();
-    }
 
     @Override
     public IRegistration createRegistration() {
@@ -57,4 +54,6 @@ public class UserAuthFactory implements com.chess.userauth.interfaces.IUserAuthF
     public ILoginDisplay createLoginDisplay() {
         return new LoginDisplay();
     }
+
+
 }

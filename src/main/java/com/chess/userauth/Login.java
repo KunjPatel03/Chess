@@ -12,11 +12,15 @@ import java.sql.SQLException;
  * @author Het Ketanbhai Shah
  */
 
-public class Login implements ILogin {
+public class Login {
     IUserAuthFactory userAuthFactory = new UserAuthFactory();
+
+
+
 
     String userId;
     String password;
+
 
     public String getUserId() {
         return userId;
@@ -34,8 +38,9 @@ public class Login implements ILogin {
         this.password = password;
     }
 
+
     public void userLogin() {
-        userAuthFactory.createLoginIO().getCredentials();
+        userAuthFactory.createLoginIO().getCredentials(this);
         if (authenticated()) {
             userAuthFactory.createLoginDisplay().getLoginSuccessMessage();
         } else {
@@ -47,16 +52,18 @@ public class Login implements ILogin {
     public boolean authenticated() {
         String QUERY = "SELECT count(*) as userCount FROM CSCI5308_26_DEVINT.Users where UserID =? and Password =?";
         Connection conn;
-        conn = userAuthFactory.createConnectToDB().getConnection();
-        ResultSet rs = null;
+        ConnectToDB connect = new ConnectToDB();
+        //conn = userAuthFactory.createConnectToDB().getConnection();
+        conn = connect.getConnection();
+        ResultSet resultSet = null;
         PreparedStatement preparedStmt = null;
         try {
             preparedStmt = conn.prepareStatement(QUERY);
             preparedStmt.setString(1, getUserId());
             preparedStmt.setString(2, getPassword());
-            rs = preparedStmt.executeQuery();
-            if (rs.next() == true) {
-                if (rs.getInt("userCount") > 0) {
+            resultSet = preparedStmt.executeQuery();
+            if (resultSet.next() == true) {
+                if (resultSet.getInt("userCount") > 0) {
                     return true;
                 } else {
                     return false;

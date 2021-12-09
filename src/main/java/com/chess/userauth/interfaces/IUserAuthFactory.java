@@ -7,7 +7,7 @@ package com.chess.userauth.interfaces;
 public interface IUserAuthFactory {
     IHome createHome();
 
-    ILogin createLogin();
+    /*ILogin createLogin();*/
 
     IRegistration createRegistration();
 

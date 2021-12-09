@@ -53,7 +53,8 @@ public class Registration implements IRegistration {
 
 
         // Getting user details in input
-        userAuthFactory.createRegistrationIO().getDetails();
+
+        userAuthFactory.createRegistrationIO().getDetails(this);
 
         if (isDataInserted()) {
             userAuthFactory.createRegistrationDisplay().getRegSuccessMessage();
@@ -76,7 +77,6 @@ public class Registration implements IRegistration {
             preparedStmt.setString(1, getPlayerName());
             preparedStmt.setString(2, getUserId());
             preparedStmt.setString(3, getPassword());
-
             preparedStmt.execute();
             conn.close();
             return true;
