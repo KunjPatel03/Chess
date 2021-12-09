@@ -16,8 +16,8 @@ public class Queen extends Piece implements IQueen {
     private Utility utility;
     private int xDistance, yDistance;
 
-    public Queen(ICoordinates iCoordinates, IPieceExistence pieceExistence, int color) {
-        super(iCoordinates, pieceExistence, color);
+    public Queen(int color) {
+        super(color);
     }
 
     @Override

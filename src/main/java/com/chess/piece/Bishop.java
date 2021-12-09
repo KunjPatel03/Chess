@@ -16,8 +16,8 @@ public class Bishop extends Piece implements IBishop {
     private int xDistance, yDistance;
     public Utility utility;
 
-    public Bishop(ICoordinates iCoordinates, IPieceExistence pieceExistence, int color) {
-        super(iCoordinates, pieceExistence, color);
+    public Bishop(int color) {
+        super(color);
     }
 
     @Override

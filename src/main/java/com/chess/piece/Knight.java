@@ -17,8 +17,8 @@ public class Knight extends Piece implements IKnight {
     private int xDistance, yDistance;
     public Utility utility;
 
-    public Knight(ICoordinates iCoordinates, IPieceExistence pieceExistence, int color) {
-        super(iCoordinates, pieceExistence, color);
+    public Knight(int color) {
+        super(color);
     }
 
     @Override

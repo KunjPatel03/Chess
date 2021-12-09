@@ -13,13 +13,9 @@ import com.chess.piece.interfaces.IPieceExistence;
 public abstract class Piece implements IPiece {
     private String pieceName;
     private int color;
-    private IPieceExistence iPieceExistence;
-    private ICoordinates iCoordinates;
-    private ICoordinates endCoordinates;
+    private IPieceExistence pieceExistence;
 
-    public Piece(ICoordinates iCoordinates, IPieceExistence pieceExistence, int color) {
-        this.iCoordinates = iCoordinates;
-        this.iPieceExistence = pieceExistence;
+    public Piece(int color) {
         this.color = color;
     }
 
@@ -30,6 +26,10 @@ public abstract class Piece implements IPiece {
     @Override
     public String getPieceName(){
         return pieceName;
+    }
+
+    public IPieceExistence getPieceExistence() {
+        return pieceExistence;
     }
 
     @Override

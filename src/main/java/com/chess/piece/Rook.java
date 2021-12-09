@@ -14,8 +14,8 @@ import com.chess.utilities.Utility;
 public class Rook extends Piece implements IRook {
     public Utility utility;
 
-    public Rook(ICoordinates iCoordinates, IPieceExistence pieceExistence, int color) {
-        super(iCoordinates, pieceExistence, color);
+    public Rook(int color) {
+        super(color);
     }
 
     @Override

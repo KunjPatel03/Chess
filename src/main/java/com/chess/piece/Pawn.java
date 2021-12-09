@@ -3,6 +3,7 @@ package com.chess.piece;
 import com.chess.board.SquareBox;
 import com.chess.board.interfaces.IBoard;
 import com.chess.board.interfaces.ICoordinates;
+import com.chess.piece.interfaces.IPawn;
 import com.chess.piece.interfaces.IPieceExistence;
 import com.chess.utilities.Utility;
 
@@ -10,13 +11,13 @@ import com.chess.utilities.Utility;
  * @author Sanjuna Konda
  */
 
-public class Pawn extends Piece{
+public class Pawn extends Piece implements IPawn {
     private PieceFactory pieceFactory = new PieceFactory();
     public Utility utility;
     private int yDistance;
 
-    public Pawn(ICoordinates iCoordinates, IPieceExistence pieceExistence, int color) {
-        super(iCoordinates, pieceExistence, color);
+    public Pawn(int color) {
+        super(color);
     }
 
     @Override

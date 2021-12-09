@@ -18,8 +18,8 @@ public class King extends Piece implements IKing {
     private boolean castlingDone = false;
     public Utility utility;
 
-    public King(ICoordinates iCoordinates, IPieceExistence pieceExistence, int color) {
-        super(iCoordinates, pieceExistence, color);
+    public King(int color) {
+        super(color);
     }
 
     public boolean isCastlingDone()

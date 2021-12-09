@@ -30,4 +30,34 @@ public class PieceFactory implements IPieceFactory {
     public ICalculateYDistance createYDistance(SquareBox startPosition, SquareBox endPosition) {
         return new CalculateYDistance(startPosition, endPosition);
     }
+
+    @Override
+    public IKing createKingPiece(int color) {
+        return new King(color);
+    }
+
+    @Override
+    public IKnight createKnightPiece(int color) {
+        return new Knight(color);
+    }
+
+    @Override
+    public IBishop createBishopPiece(int color) {
+        return new Bishop(color);
+    }
+
+    @Override
+    public IQueen createQueenPiece(int color) {
+        return new Queen(color);
+    }
+
+    @Override
+    public IRook createRookPiece(int color) {
+        return new Rook(color);
+    }
+
+    @Override
+    public IPawn createPawnPiece(int color) {
+        return new Pawn(color);
+    }
 }
