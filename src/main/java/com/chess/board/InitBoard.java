@@ -3,7 +3,6 @@ package com.chess.board;
 import com.chess.board.interfaces.IBoardFactory;
 import com.chess.board.interfaces.IInitBoard;
 import com.chess.board.interfaces.ISquareBox;
-import com.chess.piece.PieceFactory;
 import com.chess.piece.interfaces.IPiece;
 import com.chess.piece.interfaces.IPieceFactory;
 
