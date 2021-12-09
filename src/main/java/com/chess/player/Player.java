@@ -8,7 +8,7 @@ import com.chess.player.interfaces.IPlayer;
 
 public class Player implements IPlayer {
     private boolean playerHuman;
-    private int color;
+    private String color;
 
     @Override
     public boolean isPlayerHuman() {
@@ -16,12 +16,7 @@ public class Player implements IPlayer {
     }
 
     @Override
-    public int getColor() {
+    public String getColor() {
         return this.color;
     }
-
-    public boolean isLost() {
-        return false;
-    }
-
 }

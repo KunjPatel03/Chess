@@ -1,15 +1,17 @@
 package com.chess.player;
 
+import com.chess.player.interfaces.IPlayerHuman;
+
 /**
  * @author Sanjuna Konda
  */
 
-public class PlayerHuman extends Player{
+public class PlayerHuman extends Player implements IPlayerHuman {
     private boolean playerHuman;
-    private int color;
+    private String color;
     private Utility utility;
 
-    public PlayerHuman(int color) {
+    public PlayerHuman(String color) {
         this.playerHuman = utility.TRUE;
         this.color = color;
     }

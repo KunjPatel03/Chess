@@ -6,5 +6,5 @@ package com.chess.player.interfaces;
 
 public interface IPlayer {
     boolean isPlayerHuman();
-    int getColor();
+    String getColor();
 }
