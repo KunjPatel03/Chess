@@ -23,7 +23,7 @@ public class ChessBoard implements IChessBoard {
     }
 
     @Override
-    public ISquareBox getSqureBox(int x, int y) {
+    public ISquareBox getSqureBox(int x, int y, ISquareBox[][] squareBoxes) {
         try {
             if (x < ZERO || x > SEVEN || y < ZERO || y > SEVEN) {
                 throw new Exception(WRONG_INPUT);
@@ -41,9 +41,16 @@ public class ChessBoard implements IChessBoard {
     }
 
     @Override
-    public void setPieceOnBoard(ICoordinates coordinates, IPiece piece) {
-        getSqureBox(coordinates.getCoordinateX(), coordinates.getCoordinateY()).setPiece(piece);
+    public ISquareBox[][] setPieceOnBoard(ICoordinates coordinates, IPiece piece, ISquareBox[][] squareBoxes) throws Exception {
+        getSqureBox(coordinates.getCoordinateX(), coordinates.getCoordinateY(),squareBoxes).setPiece(piece);
+        return squareBoxes;
     }
 
+    @Override
+    public ISquareBox[][] updateBoard(ICoordinates currentPosition, ICoordinates nextPosition, ISquareBox[][] squareBoxes) throws Exception {
+        getSqureBox(currentPosition.getCoordinateX(), currentPosition.getCoordinateY(),squareBoxes).setPiece(null);
+        setPieceOnBoard(nextPosition,getSqureBox(nextPosition.getCoordinateX(),nextPosition.getCoordinateY(),squareBoxes).getPiece(),squareBoxes);
+        return squareBoxes;
+    }
 
 }

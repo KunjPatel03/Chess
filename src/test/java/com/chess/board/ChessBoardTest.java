@@ -17,8 +17,9 @@ public class ChessBoardTest {
     @Test(expected = Exception.class)
     public void getSqureBoxCheckExceptionTest() throws Exception {
         IBoardFactory boardFactory =new BoardFactory();
-        IChessBoard iChessBoard= boardFactory.createChessboard();
-        iChessBoard.getSqureBox(EIGHT,SEVEN);
+        IChessBoard chessboard= boardFactory.createChessboard();
+        ISquareBox squareBox[][] = chessboard.initializeBoard();
+        chessboard.getSqureBox(EIGHT,SEVEN,squareBox);
     }
 
     @Test
@@ -26,7 +27,7 @@ public class ChessBoardTest {
         IBoardFactory boardFactory =new BoardFactory();
         IChessBoard chessboard= boardFactory.createChessboard();
         ISquareBox squareBox[][] = chessboard.initializeBoard();
-        Assert.assertEquals(squareBox[ZERO][ZERO],chessboard.getSqureBox(ZERO,ZERO));
+        Assert.assertEquals(squareBox[ZERO][ZERO],chessboard.getSqureBox(ZERO,ZERO,squareBox));
     }
 
     @Test
@@ -34,7 +35,7 @@ public class ChessBoardTest {
         IBoardFactory boardFactory =new BoardFactory();
         IChessBoard chessboard= boardFactory.createChessboard();
         ISquareBox squareBox[][] = chessboard.initializeBoard();
-        Assert.assertEquals(squareBox[SEVEN][SEVEN],chessboard.getSqureBox(SEVEN,SEVEN));
+        Assert.assertEquals(squareBox[SEVEN][SEVEN],chessboard.getSqureBox(SEVEN,SEVEN,squareBox));
     }
 
     @Test
@@ -42,7 +43,7 @@ public class ChessBoardTest {
         IBoardFactory boardFactory =new BoardFactory();
         IChessBoard chessboard= boardFactory.createChessboard();
         ISquareBox squareBox[][] = chessboard.initializeBoard();
-        Assert.assertEquals(squareBox[FIVE][FIVE],chessboard.getSqureBox(FIVE,FIVE));
+        Assert.assertEquals(squareBox[FIVE][FIVE],chessboard.getSqureBox(FIVE,FIVE,squareBox));
     }
 
     @Test

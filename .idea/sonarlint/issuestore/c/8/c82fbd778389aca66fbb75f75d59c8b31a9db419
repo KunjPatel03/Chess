@@ -1,5 +1,0 @@
-
-q
-java:S1450"[Remove the "boardFactory" field and declare it as a local variable in the relevant methods.(’ýú«
-F
-java:S1068"0Remove this unused "boardFactory" private field.(’ýú«

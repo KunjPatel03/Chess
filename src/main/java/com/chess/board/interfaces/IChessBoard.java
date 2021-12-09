@@ -7,7 +7,11 @@ import com.chess.piece.interfaces.IPiece;
  */
 
 public interface IChessBoard {
-    ISquareBox getSqureBox(int x, int y) throws Exception;
-    void setPieceOnBoard(ICoordinates iCoordinates, IPiece iPiece) throws Exception;
+    ISquareBox getSqureBox(int x, int y,ISquareBox[][] squareBoxes) throws Exception;
+
+    ISquareBox[][] setPieceOnBoard(ICoordinates coordinates, IPiece piece, ISquareBox[][] squareBoxes) throws Exception;
+
+    ISquareBox[][] updateBoard(ICoordinates currentPosition, ICoordinates nextPosition, ISquareBox[][] squareBoxes) throws Exception;
+
     ISquareBox [][] initializeBoard();
 }

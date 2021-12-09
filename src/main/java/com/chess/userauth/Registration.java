@@ -71,7 +71,7 @@ public class Registration implements IRegistration {
 
         Connection conn;
         conn = userAuthFactory.createConnectToDB().getConnection();
-        PreparedStatement preparedStmt = null;
+        PreparedStatement preparedStmt;
         try {
             preparedStmt = conn.prepareStatement(QUERY);
             preparedStmt.setString(1, getPlayerName());

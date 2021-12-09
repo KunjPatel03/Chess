@@ -42,16 +42,16 @@ public class InitBoard implements IInitBoard {
     @Override
     public ISquareBox[][] initializeWhitePieces(ISquareBox[][] squareBoxes) {
 
-        squareBoxes[ZERO][ZERO].setPiece((IPiece) pieceFactory.createRookPiece(WHITE_ROOK,WHITE));
-        squareBoxes[ZERO][SEVEN].setPiece((IPiece) pieceFactory.createRookPiece(WHITE_ROOK,WHITE));
-        squareBoxes[ZERO][ONE].setPiece((IPiece) pieceFactory.createKnightPiece(WHITE_KNIGHT,WHITE));
-        squareBoxes[ZERO][SIX].setPiece((IPiece) pieceFactory.createKnightPiece(WHITE_KNIGHT,WHITE));
-        squareBoxes[ZERO][TWO].setPiece((IPiece) pieceFactory.createBishopPiece(WHITE_BISHOP,WHITE));
-        squareBoxes[ZERO][FIVE].setPiece((IPiece) pieceFactory.createBishopPiece(WHITE_BISHOP,WHITE));
-        squareBoxes[ZERO][THREE].setPiece((IPiece) pieceFactory.createQueenPiece(WHITE_QUEEN,WHITE));
-        squareBoxes[ZERO][FOUR].setPiece((IPiece) pieceFactory.createKingPiece(WHITE_KING,WHITE));
+        squareBoxes[SEVEN][SEVEN].setPiece((IPiece) pieceFactory.createRookPiece(WHITE_ROOK,WHITE));
+        squareBoxes[SEVEN][ZERO].setPiece((IPiece) pieceFactory.createRookPiece(WHITE_ROOK,WHITE));
+        squareBoxes[SEVEN][ONE].setPiece((IPiece) pieceFactory.createKnightPiece(WHITE_KNIGHT,WHITE));
+        squareBoxes[SEVEN][SIX].setPiece((IPiece) pieceFactory.createKnightPiece(WHITE_KNIGHT,WHITE));
+        squareBoxes[SEVEN][TWO].setPiece((IPiece) pieceFactory.createBishopPiece(WHITE_BISHOP,WHITE));
+        squareBoxes[SEVEN][FIVE].setPiece((IPiece) pieceFactory.createBishopPiece(WHITE_BISHOP,WHITE));
+        squareBoxes[SEVEN][THREE].setPiece((IPiece) pieceFactory.createQueenPiece(WHITE_QUEEN,WHITE));
+        squareBoxes[SEVEN][FOUR].setPiece((IPiece) pieceFactory.createKingPiece(WHITE_KING,WHITE));
         for (int index = ZERO; index < EIGHT; index++) {
-            squareBoxes[ONE][index].setPiece((IPiece) pieceFactory.createPawnPiece(WHITE_PAWN,WHITE));
+            squareBoxes[SIX][index].setPiece((IPiece) pieceFactory.createPawnPiece(WHITE_PAWN,WHITE));
         }
         return squareBoxes;
     }
@@ -59,16 +59,17 @@ public class InitBoard implements IInitBoard {
     @Override
     public ISquareBox[][] initializeBlackPieces(ISquareBox[][] squareBoxes) {
 
-        squareBoxes[SEVEN][ZERO].setPiece((IPiece) pieceFactory.createRookPiece(BLACK_ROOK,BLACK));
-        squareBoxes[SEVEN][SEVEN].setPiece((IPiece) pieceFactory.createRookPiece(BLACK_ROOK,BLACK));
-        squareBoxes[SEVEN][TWO].setPiece((IPiece) pieceFactory.createBishopPiece(BLACK_BISHOP,BLACK));
-        squareBoxes[SEVEN][FIVE].setPiece((IPiece) pieceFactory.createBishopPiece(BLACK_BISHOP,BLACK));
-        squareBoxes[SEVEN][ONE].setPiece((IPiece) pieceFactory.createKnightPiece(BLACK_KNIGHT,BLACK));
-        squareBoxes[SEVEN][SIX].setPiece((IPiece) pieceFactory.createKnightPiece(BLACK_KNIGHT,BLACK));
-        squareBoxes[SEVEN][THREE].setPiece((IPiece) pieceFactory.createQueenPiece(BLACK_QUEEN,BLACK));
-        squareBoxes[SEVEN][FOUR].setPiece((IPiece) pieceFactory.createKingPiece(BLACK_KING,BLACK));
+
+        squareBoxes[ZERO][ZERO].setPiece((IPiece) pieceFactory.createRookPiece(BLACK_ROOK,BLACK));
+        squareBoxes[ZERO][SEVEN].setPiece((IPiece) pieceFactory.createRookPiece(BLACK_ROOK,BLACK));
+        squareBoxes[ZERO][TWO].setPiece((IPiece) pieceFactory.createBishopPiece(BLACK_BISHOP,BLACK));
+        squareBoxes[ZERO][FIVE].setPiece((IPiece) pieceFactory.createBishopPiece(BLACK_BISHOP,BLACK));
+        squareBoxes[ZERO][SIX].setPiece((IPiece) pieceFactory.createKnightPiece(BLACK_KNIGHT,BLACK));
+        squareBoxes[ZERO][ONE].setPiece((IPiece) pieceFactory.createKnightPiece(BLACK_KNIGHT,BLACK));
+        squareBoxes[ZERO][THREE].setPiece((IPiece) pieceFactory.createQueenPiece(BLACK_QUEEN,BLACK));
+        squareBoxes[ZERO][FOUR].setPiece((IPiece) pieceFactory.createKingPiece(BLACK_KING,BLACK));
         for (int index = ZERO; index < EIGHT; index++) {
-            squareBoxes[SIX][index].setPiece((IPiece) pieceFactory.createPawnPiece(BLACK_PAWN,BLACK));
+            squareBoxes[ONE][index].setPiece((IPiece) pieceFactory.createPawnPiece(BLACK_PAWN,BLACK));
         }
         return squareBoxes;
     }

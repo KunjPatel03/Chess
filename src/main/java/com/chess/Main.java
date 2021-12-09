@@ -12,7 +12,6 @@ public class Main {
 
     public static void main(String args[]) {
 
-        System.out.println("Hello and welcome to the Chess!");
         userAuthFactory.createHome().indexPart();
         boardFactory.createShowBoard().displayBoard(boardFactory.createChessboard().initializeBoard());
     }

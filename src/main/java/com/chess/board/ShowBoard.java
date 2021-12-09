@@ -27,7 +27,7 @@ public class ShowBoard implements IShowBoard {
 
         for (int xCord = ZERO; xCord < EIGHT; xCord++) {
 
-            boardFactory.createShowBoardDisplay().displayVerticalIndex(xCord);
+            boardFactory.createShowBoardDisplay().displayVerticalIndex((8-xCord));
 
             for (int yCord = ZERO; yCord < EIGHT; yCord++) {
                 if (squareBoxes[xCord][yCord].getPiece() == null) {

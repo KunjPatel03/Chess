@@ -15,7 +15,7 @@ public class ShowBoardDisplay implements IShowBoardDisplay {
     @Override
     public void displayVerticalIndex(int xCord) {
         System.out.print(" |");
-        System.out.print(1+xCord+" |");
+        System.out.print(xCord+" |");
     }
 
     @Override
