@@ -27,7 +27,7 @@ public class Knight extends Piece implements IKnight {
     }
 
     @Override
-    public boolean isValidMove(IBoard board, SquareBox startPosition, SquareBox endPosition) {
+    public boolean isValidMove(SquareBox startPosition, SquareBox endPosition) {
         if(endPosition.getPiece().getPieceColor() == this.getPieceColor()) {
             return false;
         }

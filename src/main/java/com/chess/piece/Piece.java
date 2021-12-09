@@ -37,6 +37,6 @@ public abstract class Piece implements IPiece {
         return this.color;
     }
 
-    public abstract boolean isValidMove(IBoard board, SquareBox startPosition, SquareBox endPosition);
+    public abstract boolean isValidMove(SquareBox startPosition, SquareBox endPosition);
 
 }

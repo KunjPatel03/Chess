@@ -1,9 +1,6 @@
 package com.chess.piece;
 
 import com.chess.board.SquareBox;
-import com.chess.board.interfaces.IBoard;
-import com.chess.board.interfaces.ICoordinates;
-import com.chess.piece.interfaces.IPieceExistence;
 import com.chess.piece.interfaces.IRook;
 import com.chess.utilities.Utility;
 
@@ -24,7 +21,7 @@ public class Rook extends Piece implements IRook {
     }
 
     @Override
-    public boolean isValidMove(IBoard board, SquareBox startPosition, SquareBox endPosition) {
+    public boolean isValidMove(SquareBox startPosition, SquareBox endPosition) {
         if(endPosition.getPiece().getPieceColor() == this.getPieceColor()) {
             return false;
         }
