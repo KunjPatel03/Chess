@@ -7,7 +7,7 @@ package com.chess.moves;
 
 
 public class Moves {
-    public boolean canMove(String curPos, String desPos, Player player) {
+    public boolean canMove(String curPos, String desPos, Piece piece) {
         curPos = "E2";
         desPos = "E5";
         int curRow, curCol, destRow, destCol;
