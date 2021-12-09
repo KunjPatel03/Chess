@@ -2,7 +2,6 @@ package com.chess.piece;
 
 import com.chess.board.SquareBox;
 import com.chess.piece.interfaces.IPawn;
-import com.chess.utilities.Utility;
 
 /**
  * @author Sanjuna Konda
@@ -13,8 +12,8 @@ public class Pawn extends Piece implements IPawn {
     public Utility utility;
     private int yDistance;
 
-    public Pawn(int color) {
-        super(color);
+    public Pawn(String pieceName, String color) {
+        super(pieceName,color);
     }
 
     @Override
@@ -24,7 +23,7 @@ public class Pawn extends Piece implements IPawn {
 
     @Override
     public boolean isValidMove(SquareBox startPosition, SquareBox endPosition) {
-        if(endPosition.getPiece().getPieceColor() == this.getPieceColor()) {
+        if(endPosition.getPiece().getPieceColor().equals(this.getPieceColor())) {
             return false;
         }
         yDistance = pieceFactory.createYDistance(startPosition, endPosition).calculateYDistanceValue();

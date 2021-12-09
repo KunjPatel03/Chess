@@ -8,6 +8,6 @@ import com.chess.board.SquareBox;
 
 public interface IPiece {
     String getPieceName();
-    int getPieceColor();
+    String getPieceColor();
     boolean isValidMove(SquareBox startPosition, SquareBox endPosition);
 }

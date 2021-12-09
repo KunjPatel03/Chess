@@ -3,7 +3,6 @@ package com.chess.piece;
 import com.chess.board.SquareBox;
 import com.chess.board.interfaces.IBoard;
 import com.chess.piece.interfaces.IKing;
-import com.chess.utilities.Utility;
 
 /**
  * @author Sanjuna Konda
@@ -16,8 +15,8 @@ public class King extends Piece implements IKing {
     private boolean castlingDone = false;
     public Utility utility;
 
-    public King(int color) {
-        super(color);
+    public King(String pieceName, String color) {
+        super(pieceName,color);
     }
 
     public boolean isCastlingDone()
@@ -37,7 +36,7 @@ public class King extends Piece implements IKing {
 
     @Override
     public boolean isValidMove(SquareBox startPosition, SquareBox endPosition) {
-        if(endPosition.getPiece().getPieceColor() == this.getPieceColor()) {
+        if(endPosition.getPiece().getPieceColor().equals(this.getPieceColor())) {
             return false;
         }
 

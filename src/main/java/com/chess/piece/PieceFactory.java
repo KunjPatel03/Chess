@@ -32,32 +32,32 @@ public class PieceFactory implements IPieceFactory {
     }
 
     @Override
-    public IKing createKingPiece(int color) {
-        return new King(color);
+    public IKing createKingPiece(String pieceName, String color) {
+        return new King(pieceName, color);
     }
 
     @Override
-    public IKnight createKnightPiece(int color) {
-        return new Knight(color);
+    public IKnight createKnightPiece(String pieceName, String color) {
+        return new Knight(pieceName, color);
     }
 
     @Override
-    public IBishop createBishopPiece(int color) {
-        return new Bishop(color);
+    public IBishop createBishopPiece(String pieceName, String color) {
+        return new Bishop(pieceName, color);
     }
 
     @Override
-    public IQueen createQueenPiece(int color) {
-        return new Queen(color);
+    public IQueen createQueenPiece(String pieceName, String color) {
+        return new Queen(pieceName, color);
     }
 
     @Override
-    public IRook createRookPiece(int color) {
-        return new Rook(color);
+    public IRook createRookPiece(String pieceName, String color) {
+        return new Rook(pieceName, color);
     }
 
     @Override
-    public IPawn createPawnPiece(int color) {
-        return new Pawn(color);
+    public IPawn createPawnPiece(String pieceName, String color) {
+        return new Pawn(pieceName, color);
     }
 }

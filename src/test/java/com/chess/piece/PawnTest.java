@@ -1,7 +1,6 @@
 package com.chess.piece;
 
 import com.chess.piece.interfaces.IPieceFactory;
-import com.chess.utilities.Utility;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -14,11 +13,11 @@ public class PawnTest {
     private Utility utility;
     @Test
     public void testKingPieceNotNull() {
-        Assert.assertNotNull(pieceFactory.createPawnPiece(0));
+        Assert.assertNotNull(pieceFactory.createPawnPiece(utility.PAWN, utility.WHITE));
     }
 
     @Test
     public void testKingGetPieceName() {
-        Assert.assertEquals(utility.PAWN, pieceFactory.createPawnPiece(0).getPieceName());
+        Assert.assertEquals(utility.PAWN, pieceFactory.createPawnPiece(utility.PAWN, utility.WHITE).getPieceName());
     }
 }

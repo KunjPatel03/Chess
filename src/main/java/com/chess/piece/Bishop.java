@@ -1,11 +1,7 @@
 package com.chess.piece;
 
 import com.chess.board.SquareBox;
-import com.chess.board.interfaces.IBoard;
-import com.chess.board.interfaces.ICoordinates;
 import com.chess.piece.interfaces.IBishop;
-import com.chess.piece.interfaces.IPieceExistence;
-import com.chess.utilities.Utility;
 
 /**
  * @author Sanjuna Konda
@@ -16,8 +12,8 @@ public class Bishop extends Piece implements IBishop {
     private int xDistance, yDistance;
     public Utility utility;
 
-    public Bishop(int color) {
-        super(color);
+    public Bishop(String pieceName, String color) {
+        super(pieceName,color);
     }
 
     @Override
@@ -27,7 +23,7 @@ public class Bishop extends Piece implements IBishop {
 
     @Override
     public boolean isValidMove(SquareBox startPosition, SquareBox endPosition) {
-        if(endPosition.getPiece().getPieceColor() == this.getPieceColor()) {
+        if(endPosition.getPiece().getPieceColor().equals(this.getPieceColor())) {
             return false;
         }
         xDistance = pieceFactory.createXDistance(startPosition, endPosition).calculateXDistanceValue();

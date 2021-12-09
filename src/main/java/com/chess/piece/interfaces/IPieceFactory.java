@@ -13,10 +13,10 @@ public interface IPieceFactory {
     IPieceExistence createPieceExistence(boolean pieceExistence);
     ICalculateXDistance createXDistance(SquareBox startPosition, SquareBox endPosition);
     ICalculateYDistance createYDistance(SquareBox startPosition, SquareBox endPosition);
-    IKing createKingPiece(int color);
-    IKnight createKnightPiece(int color);
-    IBishop createBishopPiece(int color);
-    IQueen createQueenPiece(int color);
-    IRook createRookPiece(int color);
-    IPawn createPawnPiece(int color);
+    IKing createKingPiece(String pieceName, String color);
+    IKnight createKnightPiece(String pieceName, String color);
+    IBishop createBishopPiece(String pieceName, String color);
+    IQueen createQueenPiece(String pieceName, String color);
+    IRook createRookPiece(String pieceName, String color);
+    IPawn createPawnPiece(String pieceName, String color);
 }

@@ -2,7 +2,6 @@ package com.chess.piece;
 
 import com.chess.board.SquareBox;
 import com.chess.piece.interfaces.IRook;
-import com.chess.utilities.Utility;
 
 /**
  * @author Sanjuna Konda
@@ -11,8 +10,8 @@ import com.chess.utilities.Utility;
 public class Rook extends Piece implements IRook {
     public Utility utility;
 
-    public Rook(int color) {
-        super(color);
+    public Rook(String pieceName, String color) {
+        super(pieceName,color);
     }
 
     @Override
@@ -22,7 +21,7 @@ public class Rook extends Piece implements IRook {
 
     @Override
     public boolean isValidMove(SquareBox startPosition, SquareBox endPosition) {
-        if(endPosition.getPiece().getPieceColor() == this.getPieceColor()) {
+        if(endPosition.getPiece().getPieceColor().equals(this.getPieceColor())) {
             return false;
         }
         if(startPosition.getCoordinates().getXCoordinate() == endPosition.getCoordinates().getXCoordinate()) {

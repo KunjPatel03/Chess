@@ -12,10 +12,11 @@ import com.chess.piece.interfaces.IPieceExistence;
 
 public abstract class Piece implements IPiece {
     private String pieceName;
-    private int color;
+    private String color;
     private IPieceExistence pieceExistence;
 
-    public Piece(int color) {
+    public Piece(String pieceName, String color) {
+        this.pieceName = pieceName;
         this.color = color;
     }
 
@@ -33,7 +34,7 @@ public abstract class Piece implements IPiece {
     }
 
     @Override
-    public int getPieceColor() {
+    public String getPieceColor() {
         return this.color;
     }
 

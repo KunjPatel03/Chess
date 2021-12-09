@@ -1,7 +1,6 @@
 package com.chess.piece;
 
 import com.chess.piece.interfaces.IPieceFactory;
-import com.chess.utilities.Utility;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -14,11 +13,11 @@ public class BishopTest {
     private Utility utility;
     @Test
     public void testKingPieceNotNull() {
-        Assert.assertNotNull(pieceFactory.createBishopPiece(0));
+        Assert.assertNotNull(pieceFactory.createBishopPiece(utility.BISHOP, utility.WHITE));
     }
 
     @Test
     public void testKingGetPieceName() {
-        Assert.assertEquals(utility.BISHOP, pieceFactory.createBishopPiece(0).getPieceName());
+        Assert.assertEquals(utility.BISHOP, pieceFactory.createBishopPiece(utility.BISHOP, utility.WHITE).getPieceName());
     }
 }
