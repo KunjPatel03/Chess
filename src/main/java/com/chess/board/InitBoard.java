@@ -15,8 +15,18 @@ import static com.chess.board.Utilites.*;
  */
 public class InitBoard implements IInitBoard {
 
-    private IBoardFactory boardFactory = new BoardFactory();
-    private IPieceFactory pieceFactory = new PieceFactory();
+    private IBoardFactory boardFactory;
+    private IPieceFactory pieceFactory;
+
+    public InitBoard setBoardFactory(IBoardFactory boardFactory){
+        this.boardFactory=boardFactory;
+        return this;
+    }
+
+    public InitBoard setPieceFactory(IPieceFactory pieceFactory){
+        this.pieceFactory=pieceFactory;
+        return this;
+    }
 
     @Override
     public ISquareBox[][] initializeNewBoard(ISquareBox[][] squareBoxes) {
@@ -44,7 +54,6 @@ public class InitBoard implements IInitBoard {
         for (int index = ZERO; index < EIGHT; index++) {
             squareBoxes[ONE][index].setPiece((IPiece) pieceFactory.createPawn(WHITE_PAWN));
         }
-
         return squareBoxes;
     }
 
@@ -62,7 +71,6 @@ public class InitBoard implements IInitBoard {
         for (int index = ZERO; index < EIGHT; index++) {
             squareBoxes[SIX][index].setPiece((IPiece) pieceFactory.createPawn(BLACK_PAWN));
         }
-
         return squareBoxes;
     }
 

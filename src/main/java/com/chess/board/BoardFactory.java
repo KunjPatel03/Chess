@@ -3,7 +3,9 @@ package com.chess.board;
 import com.chess.board.display.ShowBoardDisplay;
 import com.chess.board.display.interfaces.IShowBoardDisplay;
 import com.chess.board.interfaces.*;
+import com.chess.piece.PieceFactory;
 import com.chess.piece.interfaces.IPiece;
+import com.chess.piece.interfaces.IPieceFactory;
 
 /**
  * @author Kunj Vijaykumar Patel
@@ -13,12 +15,12 @@ public class BoardFactory implements IBoardFactory {
 
     @Override
     public ISquareBox createSqureBox(ICoordinates coordinates, IPiece piece) {
-        return new SquareBox(coordinates,piece);
+        return new SquareBox(coordinates,piece).setFactory(this);
     }
 
     @Override
     public ISquareBox createSqureBox(ICoordinates coordinates) {
-        return new SquareBox(coordinates);
+        return new SquareBox(coordinates).setFactory(this);
     }
 
     public ISquareBox[][] createSqureBoxes(int size) {
@@ -32,17 +34,21 @@ public class BoardFactory implements IBoardFactory {
 
     @Override
     public IChessBoard createChessboard() {
-        return  new ChessBoard();
+        return new ChessBoard();
     }
 
     @Override
     public IShowBoard createShowBoard() {
-        return new ShowBoard();
+        return new ShowBoard().setFactory(this);
     }
 
     @Override
     public IInitBoard createInitBoard() {
-        return new InitBoard();
+        return new InitBoard().setBoardFactory(this).setPieceFactory(createPieceFactory());
+    }
+
+    private IPieceFactory createPieceFactory() {
+        return new PieceFactory();
     }
 
     @Override

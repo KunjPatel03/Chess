@@ -12,13 +12,18 @@ import com.chess.piece.interfaces.IPiece;
  * @author Kunj Vijaykumar Patel
  */
 public class SquareBox implements ISquareBox {
-    private IBoardFactory boardFactory = new BoardFactory();
+    private IBoardFactory boardFactory;
     private IPiece piece;
     private ICoordinates coordinates;
 
     public SquareBox(ICoordinates coordinates,IPiece piece){
         this.coordinates = coordinates;
         this.piece = piece;
+    }
+
+    public SquareBox setFactory(IBoardFactory boardFactory){
+        this.boardFactory = boardFactory;
+        return this;
     }
     public SquareBox(ICoordinates coordinates){
         this(coordinates,null);

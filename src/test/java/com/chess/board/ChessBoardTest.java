@@ -21,11 +21,27 @@ public class ChessBoardTest {
     }
 
     @Test
-    public void getSqureBoxTest() throws Exception {
+    public void getSqureBoxCheckWhitePieceTest() throws Exception {
         IBoardFactory boardFactory =new BoardFactory();
         IChessBoard chessboard= boardFactory.createChessboard();
-        ISquareBox squareBox = null;
-        Assert.assertEquals(squareBox,chessboard.getSqureBox(TWO,THREE));
+        ISquareBox squareBox[][] = chessboard.initializeBoard();
+        Assert.assertEquals(squareBox[ZERO][ZERO],chessboard.getSqureBox(ZERO,ZERO));
+    }
+
+    @Test
+    public void getSqureBoxCheckBlackPieceTest() throws Exception {
+        IBoardFactory boardFactory =new BoardFactory();
+        IChessBoard chessboard= boardFactory.createChessboard();
+        ISquareBox squareBox[][] = chessboard.initializeBoard();
+        Assert.assertEquals(squareBox[SEVEN][SEVEN],chessboard.getSqureBox(SEVEN,SEVEN));
+    }
+
+    @Test
+    public void getSqureBoxCheckEmptySqureTest() throws Exception {
+        IBoardFactory boardFactory =new BoardFactory();
+        IChessBoard chessboard= boardFactory.createChessboard();
+        ISquareBox squareBox[][] = chessboard.initializeBoard();
+        Assert.assertEquals(squareBox[FIVE][FIVE],chessboard.getSqureBox(FIVE,FIVE));
     }
 
     @Test

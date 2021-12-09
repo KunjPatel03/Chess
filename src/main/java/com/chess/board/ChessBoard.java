@@ -18,7 +18,7 @@ public class ChessBoard implements IChessBoard {
     private ISquareBox[][] squareBoxes;
 
     public ChessBoard() {
-        this.boardFactory =new BoardFactory();
+        this.boardFactory = new BoardFactory();
         this.squareBoxes = boardFactory.createSqureBoxes(EIGHT);
     }
 

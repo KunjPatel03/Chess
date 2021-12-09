@@ -12,7 +12,12 @@ import static com.chess.board.Utilites.ZERO;
  */
 public class ShowBoard implements IShowBoard {
 
-    private IBoardFactory boardFactory = new BoardFactory();
+    private IBoardFactory boardFactory;
+
+    public ShowBoard setFactory(IBoardFactory boardFactory) {
+        this.boardFactory = boardFactory;
+        return this;
+    }
 
     @Override
     public void displayBoard(ISquareBox[][] squareBoxes) {
