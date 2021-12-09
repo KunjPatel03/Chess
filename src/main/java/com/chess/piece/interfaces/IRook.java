@@ -1,8 +1,9 @@
 package com.chess.piece.interfaces;
 
 /**
- * @author Kunj Vijaykumar Patel
+ * @author Sanjuna Konda
  */
 
 public interface IRook {
+
 }
