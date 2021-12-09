@@ -9,6 +9,7 @@ import static com.chess.board.Utilites.ZERO;
 /**
  * @author Kunj Vijaykumar Patel
  */
+
 public class ValidateCoordinate implements IValidateCoordinate {
 
     @Override

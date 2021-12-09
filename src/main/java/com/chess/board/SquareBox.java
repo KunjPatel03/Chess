@@ -11,6 +11,7 @@ import com.chess.piece.interfaces.IPiece;
 /**
  * @author Kunj Vijaykumar Patel
  */
+
 public class SquareBox implements ISquareBox {
     private IBoardFactory boardFactory;
     private IPiece piece;

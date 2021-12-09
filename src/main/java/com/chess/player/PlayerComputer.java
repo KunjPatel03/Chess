@@ -1,5 +1,9 @@
 package com.chess.player;
 
+/**
+ * @author Sanjuna Konda
+ */
+
 import com.chess.player.interfaces.IPlayerComputer;
 
 public class PlayerComputer extends Player implements IPlayerComputer {

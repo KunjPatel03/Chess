@@ -1,39 +1,63 @@
 package com.chess.piece;
 
+import com.chess.board.Coordinates;
+import com.chess.board.SquareBox;
+import com.chess.board.interfaces.ICoordinates;
 import com.chess.piece.interfaces.*;
 
 /**
- * @author Kunj Vijaykumar Patel
+ * @author Sanjuna Konda
  */
+
 public class PieceFactory implements IPieceFactory {
 
     @Override
-    public IBishop createBishop(String name) {
-        return new Bishop(name);
+    public ICoordinates createCoordinates(int xCoordinate, int yCoordinate) {
+        return new Coordinates(xCoordinate, yCoordinate);
     }
 
     @Override
-    public IKing createKing(String name) {
-        return new King(name);
+    public IPieceExistence createPieceExistence(boolean pieceExistence) {
+        return new PieceExistence(pieceExistence);
     }
 
     @Override
-    public IKnight createKnight(String name) {
-        return new Knight(name);
+    public ICalculateXDistance createXDistance(SquareBox startPosition, SquareBox endPosition) {
+        return new CalculateXDistance(startPosition, endPosition);
     }
 
     @Override
-    public IPawn createPawn(String name) {
-        return new Pawn(name);
+    public ICalculateYDistance createYDistance(SquareBox startPosition, SquareBox endPosition) {
+        return new CalculateYDistance(startPosition, endPosition);
     }
 
     @Override
-    public IQueen createQueen(String name) {
-        return new Queen(name);
+    public IKing createKingPiece(String pieceName, String color) {
+        return new King(pieceName, color);
     }
 
     @Override
-    public IRook createRook(String name) {
-        return new Rook(name);
+    public IKnight createKnightPiece(String pieceName, String color) {
+        return new Knight(pieceName, color);
+    }
+
+    @Override
+    public IBishop createBishopPiece(String pieceName, String color) {
+        return new Bishop(pieceName, color);
+    }
+
+    @Override
+    public IQueen createQueenPiece(String pieceName, String color) {
+        return new Queen(pieceName, color);
+    }
+
+    @Override
+    public IRook createRookPiece(String pieceName, String color) {
+        return new Rook(pieceName, color);
+    }
+
+    @Override
+    public IPawn createPawnPiece(String pieceName, String color) {
+        return new Pawn(pieceName, color);
     }
 }

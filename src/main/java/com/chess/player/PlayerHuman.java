@@ -2,6 +2,10 @@ package com.chess.player;
 
 import com.chess.player.interfaces.IPlayerHuman;
 
+/**
+ * @author Sanjuna Konda
+ */
+
 public class PlayerHuman extends Player implements IPlayerHuman {
     private boolean playerHuman;
     private String color;

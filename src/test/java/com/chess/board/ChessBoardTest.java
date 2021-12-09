@@ -11,6 +11,7 @@ import static com.chess.board.Utilites.*;
 /**
  * @author Kunj Vijaykumar Patel
  */
+
 public class ChessBoardTest {
 
     @Test(expected = Exception.class)

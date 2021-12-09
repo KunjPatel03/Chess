@@ -5,6 +5,10 @@ import com.chess.player.interfaces.IPlayerComputer;
 import com.chess.player.interfaces.IPlayerFactory;
 import com.chess.player.interfaces.IPlayerHuman;
 
+/**
+ * @author Sanjuna Konda
+ */
+
 public class PlayerFactory implements IPlayerFactory {
     private Utility utility;
 

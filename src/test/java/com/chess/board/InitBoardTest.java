@@ -12,6 +12,7 @@ import static org.junit.Assert.*;
 /**
  * @author Kunj Vijaykumar Patel
  */
+
 public class InitBoardTest {
 
     @Test

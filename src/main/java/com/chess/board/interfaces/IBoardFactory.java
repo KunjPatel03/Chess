@@ -6,6 +6,7 @@ import com.chess.piece.interfaces.IPiece;
 /**
  * @author Kunj Vijaykumar Patel
  */
+
 public interface IBoardFactory {
 
     ISquareBox createSqureBox(ICoordinates iCoordinates, IPiece iPiece);
