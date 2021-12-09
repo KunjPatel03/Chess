@@ -19,7 +19,7 @@ public class CalculateXDistance implements ICalculateXDistance {
 
     @Override
     public int calculateXDistanceValue() {
-        xDistance = Math.abs(start.getCoordinates().getXCoordinate() - end.getCoordinates().getXCoordinate());
+        xDistance = Math.abs(start.getCoordinates().getCoordinateX() - end.getCoordinates().getCoordinateX());
         return xDistance;
     }
 }

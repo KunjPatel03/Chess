@@ -15,18 +15,13 @@ public class Rook extends Piece implements IRook {
     }
 
     @Override
-    public String getPieceName() {
-        return utility.ROOK;
-    }
-
-    @Override
     public boolean isValidMove(SquareBox startPosition, SquareBox endPosition) {
         if(endPosition.getPiece().getPieceColor().equals(this.getPieceColor())) {
             return false;
         }
-        if(startPosition.getCoordinates().getXCoordinate() == endPosition.getCoordinates().getXCoordinate()) {
+        if(startPosition.getCoordinates().getCoordinateX() == endPosition.getCoordinates().getCoordinateX()) {
             return true;
-        } else if(startPosition.getCoordinates().getYCoordinate() == endPosition.getCoordinates().getYCoordinate()) {
+        } else if(startPosition.getCoordinates().getCoordinateY() == endPosition.getCoordinates().getCoordinateY()) {
             return true;
         }
         return false;

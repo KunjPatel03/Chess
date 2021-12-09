@@ -12,12 +12,7 @@ public class RookTest {
     IPieceFactory pieceFactory = new PieceFactory();
     private Utility utility;
     @Test
-    public void testKingPieceNotNull() {
+    public void testRookPieceNotNull() {
         Assert.assertNotNull(pieceFactory.createRookPiece(utility.ROOK, utility.WHITE));
-    }
-
-    @Test
-    public void testKingGetPieceName() {
-        Assert.assertEquals(utility.ROOK, pieceFactory.createRookPiece(utility.ROOK, utility.WHITE).getPieceName());
     }
 }

@@ -1,12 +1,15 @@
 package com.chess.board.interfaces;
 
 /**
- * @author Sanjuna Konda
+ * @author Kunj Vijaykumar Patel
  */
 
 public interface ICoordinates {
-    int getXCoordinate();
-    void setXCoordinate(int x);
-    int getYCoordinate();
-    void setYCoordinate(int y);
+    int getCoordinateX();
+
+    void setCoordinateX(int x);
+
+    int getCoordinateY();
+
+    void setCoordinateY(int y);
 }

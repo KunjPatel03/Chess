@@ -18,7 +18,7 @@ public class CalculateYDistance implements ICalculateYDistance {
     }
     @Override
     public int calculateYDistanceValue() {
-        yDistance = Math.abs(start.getCoordinates().getYCoordinate() - end.getCoordinates().getYCoordinate());
+        yDistance = Math.abs(start.getCoordinates().getCoordinateY() - end.getCoordinates().getCoordinateY());
         return yDistance;
     }
 }

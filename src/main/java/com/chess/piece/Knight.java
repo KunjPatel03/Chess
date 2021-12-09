@@ -18,11 +18,6 @@ public class Knight extends Piece implements IKnight {
     }
 
     @Override
-    public String getPieceName(){
-        return utility.KNIGHT;
-    }
-
-    @Override
     public boolean isValidMove(SquareBox startPosition, SquareBox endPosition) {
         if(endPosition.getPiece().getPieceColor().equals(this.getPieceColor())) {
             return false;

@@ -5,5 +5,5 @@ package com.chess.piece.interfaces;
  */
 
 public interface IQueen {
-    String getPieceName();
+
 }

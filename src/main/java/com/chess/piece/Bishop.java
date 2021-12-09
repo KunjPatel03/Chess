@@ -15,12 +15,7 @@ public class Bishop extends Piece implements IBishop {
     public Bishop(String pieceName, String color) {
         super(pieceName,color);
     }
-
-    @Override
-    public String getPieceName(){
-        return utility.BISHOP;
-    }
-
+    
     @Override
     public boolean isValidMove(SquareBox startPosition, SquareBox endPosition) {
         if(endPosition.getPiece().getPieceColor().equals(this.getPieceColor())) {

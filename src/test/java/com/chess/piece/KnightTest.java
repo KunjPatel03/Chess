@@ -12,12 +12,7 @@ public class KnightTest {
     IPieceFactory pieceFactory = new PieceFactory();
     private Utility utility;
     @Test
-    public void testKingPieceNotNull() {
+    public void testKnightPieceNotNull() {
         Assert.assertNotNull(pieceFactory.createKnightPiece(utility.KNIGHT, utility.WHITE));
-    }
-
-    @Test
-    public void testKingGetPieceName() {
-        Assert.assertEquals(utility.KNIGHT, pieceFactory.createKnightPiece(utility.KNIGHT, utility.WHITE).getPieceName());
     }
 }

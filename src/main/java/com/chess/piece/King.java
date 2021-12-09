@@ -30,11 +30,6 @@ public class King extends Piece implements IKing {
     }
 
     @Override
-    public String getPieceName(){
-        return utility.KING;
-    }
-
-    @Override
     public boolean isValidMove(SquareBox startPosition, SquareBox endPosition) {
         if(endPosition.getPiece().getPieceColor().equals(this.getPieceColor())) {
             return false;

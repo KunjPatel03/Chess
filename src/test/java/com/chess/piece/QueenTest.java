@@ -12,12 +12,7 @@ public class QueenTest {
     IPieceFactory pieceFactory = new PieceFactory();
     private Utility utility;
     @Test
-    public void testKingPieceNotNull() {
+    public void testQueenPieceNotNull() {
         Assert.assertNotNull(pieceFactory.createQueenPiece(utility.QUEEN, utility.WHITE));
-    }
-
-    @Test
-    public void testKingGetPieceName() {
-        Assert.assertEquals(utility.QUEEN, pieceFactory.createQueenPiece(utility.QUEEN, utility.WHITE).getPieceName());
     }
 }

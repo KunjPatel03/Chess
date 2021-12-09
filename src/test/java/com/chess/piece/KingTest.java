@@ -15,9 +15,4 @@ public class KingTest {
     public void testKingPieceNotNull() {
         Assert.assertNotNull(pieceFactory.createKingPiece(utility.KING, utility.WHITE));
     }
-
-    @Test
-    public void testKingGetPieceName() {
-        Assert.assertEquals(utility.KING, pieceFactory.createKingPiece(utility.KING, utility.WHITE).getPieceName());
-    }
 }

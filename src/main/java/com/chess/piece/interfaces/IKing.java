@@ -8,7 +8,6 @@ import com.chess.board.interfaces.IBoard;
  */
 
 public interface IKing {
-    String getPieceName();
     boolean isCastlingRight(IBoard board, SquareBox startPosition, SquareBox endPosition);
     boolean checkForCastling(SquareBox startPosition, SquareBox endPosition);
 }

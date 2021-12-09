@@ -17,11 +17,6 @@ public class Pawn extends Piece implements IPawn {
     }
 
     @Override
-    public String getPieceName(){
-        return utility.PAWN;
-    }
-
-    @Override
     public boolean isValidMove(SquareBox startPosition, SquareBox endPosition) {
         if(endPosition.getPiece().getPieceColor().equals(this.getPieceColor())) {
             return false;

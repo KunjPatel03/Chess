@@ -12,12 +12,7 @@ public class PawnTest {
     IPieceFactory pieceFactory = new PieceFactory();
     private Utility utility;
     @Test
-    public void testKingPieceNotNull() {
+    public void testPawnPieceNotNull() {
         Assert.assertNotNull(pieceFactory.createPawnPiece(utility.PAWN, utility.WHITE));
-    }
-
-    @Test
-    public void testKingGetPieceName() {
-        Assert.assertEquals(utility.PAWN, pieceFactory.createPawnPiece(utility.PAWN, utility.WHITE).getPieceName());
     }
 }

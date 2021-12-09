@@ -3,10 +3,15 @@ package com.chess.board.interfaces;
 import com.chess.piece.interfaces.IPiece;
 
 /**
- * @author Sanjuna Konda
+ * @author Kunj Vijaykumar Patel
  */
 
 public interface ISquareBox {
-    ICoordinates getCoordinates();
+
+    void setPiece(IPiece iPiece);
+
     IPiece getPiece();
+
+    ICoordinates getCoordinates();
+
 }

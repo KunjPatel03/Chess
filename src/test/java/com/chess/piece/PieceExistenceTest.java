@@ -11,6 +11,7 @@ import org.junit.Test;
 public class PieceExistenceTest {
     IPieceFactory pieceFactory = new PieceFactory();
     private Utility utility;
+
     @Test
     public void testPieceExistenceNotNull() {
         Assert.assertNotNull(pieceFactory.createPieceExistence(utility.TRUE));
@@ -20,5 +21,4 @@ public class PieceExistenceTest {
     public void testPieceExistenceAvailability() {
         Assert.assertEquals(utility.TRUE, pieceFactory.createPieceExistence(true).isExists());
     }
-
 }

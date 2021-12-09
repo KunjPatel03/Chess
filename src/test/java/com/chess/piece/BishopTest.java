@@ -12,12 +12,7 @@ public class BishopTest {
     IPieceFactory pieceFactory = new PieceFactory();
     private Utility utility;
     @Test
-    public void testKingPieceNotNull() {
+    public void testBishopPieceNotNull() {
         Assert.assertNotNull(pieceFactory.createBishopPiece(utility.BISHOP, utility.WHITE));
-    }
-
-    @Test
-    public void testKingGetPieceName() {
-        Assert.assertEquals(utility.BISHOP, pieceFactory.createBishopPiece(utility.BISHOP, utility.WHITE).getPieceName());
     }
 }
