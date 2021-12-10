@@ -6,6 +6,10 @@ import org.junit.Test;
 
 import static com.chess.Utilites.*;
 
+/**
+ * @author Het Ketanbhai Shah
+ */
+
 public class MovesTest {
     IMoves move = new Moves();
 
