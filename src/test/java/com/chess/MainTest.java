@@ -1,14 +1,14 @@
 package com.chess;
 
-import org.junit.*;
-import static org.junit.Assert.*;
+import org.junit.Test;
+
+import static org.junit.Assert.assertNotNull;
 
 public class MainTest {
-    Main m1 = new Main();
-    @Test
-    public void mainTest()
-    {
-        assertNotNull(m1);
-    }
+    Main main = new Main();
 
+    @Test
+    public void mainTest() {
+        assertNotNull(main);
+    }
 }
