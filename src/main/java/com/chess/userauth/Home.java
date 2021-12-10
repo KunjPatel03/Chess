@@ -1,6 +1,7 @@
 package com.chess.userauth;
 
 import com.chess.userauth.interfaces.IHome;
+import com.chess.userauth.interfaces.IRegistration;
 import com.chess.userauth.interfaces.IUserAuthFactory;
 
 import java.util.Scanner;
@@ -19,7 +20,7 @@ public class Home implements IHome {
 
         IUserAuthFactory userAuthFactory = new UserAuthFactory();
         Login login = new Login();
-        Registration registration = new Registration();
+        IRegistration registration = new Registration();
         Scanner reader = new Scanner(System.in);
 
         userAuthFactory.createHomeDisplay().getWelcomeMessage();
