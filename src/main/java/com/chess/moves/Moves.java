@@ -6,12 +6,19 @@ import com.chess.board.interfaces.IChessBoard;
 import com.chess.board.interfaces.ISquareBox;
 import com.chess.moves.io.MovesIO;
 
+import static com.chess.moves.Utilities.*;
+
 /**
  * @author Het Ketanbhai Shah
  */
 
 
 public class Moves {
+
+    private String curPos;
+    private String desPos;
+    private boolean contGame = true;
+
     public String getCurPos() {
         return curPos;
     }
@@ -28,47 +35,18 @@ public class Moves {
         this.desPos = desPos;
     }
 
-    String curPos;
-    String desPos;
-    boolean contGame = true;
-
-    public boolean isContGame() {
-        return contGame;
-    }
-
-    public void setContGame(boolean contGame) {
-        this.contGame = contGame;
-    }
-
-
-    public boolean canMove(String curPos, String desPos) {
-        int curRow, curCol, destRow, destCol;
-        curRow = inputToRow(curPos);
-        curCol = inputToCol(curPos);
-        destRow = inputToRow(desPos);
-        destCol = inputToCol(desPos);
-
-        if ((curRow >= 0 && curRow < Constants.TOTAL_ROW) && (curCol >= 0 && curCol < Constants.TOTAL_COL)) { // check source space
-            if ((destRow >= 0 && destRow < Constants.TOTAL_ROW) && (destCol >= 0 && destCol < Constants.TOTAL_COL)) { // check dest space
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public void takeMovesInput() {
+    public boolean takeMovesInput() {
         MovesIO movesIO = new MovesIO();
-        movesIO.movesInput(this);
-
+        return movesIO.movesInput(this);
     }
 
     public void chessLoop(ISquareBox[][] squareBoxes) throws Exception {
-        while (contGame) {
-            takeMovesInput();
-            if (contGame == true) {
-                updateTheBoard(squareBoxes);
+        while (true) {
+            contGame = takeMovesInput();
+            if (contGame== false){
+                break;
             }
-
+            updateTheBoard(squareBoxes);
         }
     }
 
@@ -80,35 +58,35 @@ public class Moves {
     }
 
     public int inputToRow(String input) {
-        char rowChar = input.charAt(1);
+        char rowChar = input.charAt(ONE);
         int row;
-        switch (rowChar) { // '0' value corresponds to '8', etc
+        switch (rowChar) {
             case '8':
-                row = 0;
+                row = ZERO;
                 break;
             case '7':
-                row = 1;
+                row = ONE;
                 break;
             case '6':
-                row = 2;
+                row = TWO;
                 break;
             case '5':
-                row = 3;
+                row = THREE;
                 break;
             case '4':
-                row = 4;
+                row = FOUR;
                 break;
             case '3':
-                row = 5;
+                row = FIVE;
                 break;
             case '2':
-                row = 6;
+                row = SIX;
                 break;
             case '1':
-                row = 7;
+                row = SEVEN;
                 break;
             default:
-                row = -1;
+                row = MINUS_ONE;
                 break;
         }
         return row;
@@ -116,36 +94,36 @@ public class Moves {
 
     // convert String input into column integer
     public int inputToCol(String input) {
-        char character = input.charAt(0);
+        char character = input.charAt(ZERO);
         character = Character.toLowerCase(character);
         int col;
         switch (character) { // '0' value corresponds to 'a', etc
             case 'a':
-                col = 0;
+                col = ZERO;
                 break;
             case 'b':
-                col = 1;
+                col = ONE;
                 break;
             case 'c':
-                col = 2;
+                col = TWO;
                 break;
             case 'd':
-                col = 3;
+                col = THREE;
                 break;
             case 'e':
-                col = 4;
+                col = FOUR;
                 break;
             case 'f':
-                col = 5;
+                col = FIVE;
                 break;
             case 'g':
-                col = 6;
+                col = SIX;
                 break;
             case 'h':
-                col = 7;
+                col = SEVEN;
                 break;
             default:
-                col = -1;
+                col = MINUS_ONE;
                 break;
         }
         return col;

@@ -20,15 +20,8 @@ public class Main {
         userAuthFactory.createHome().indexPart();
         squareBoxes=boardFactory.createChessboard().initializeBoard();
         boardFactory.createShowBoard().displayBoard(squareBoxes);
-
-
         moves.chessLoop(squareBoxes);
 
-            /*moves.takeMovesInput();
-            moves.updateTheBoard(squareBoxes);*/
-
-       /* moves.takeMovesInput();
-        moves.updateTheBoard(squareBoxes);*/
     }
 
 }

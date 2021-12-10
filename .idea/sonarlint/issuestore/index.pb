@@ -37,8 +37,6 @@ c
 3src/main/java/com/chess/piece/interfaces/IRook.java,1\8\180a123b22d076f9254cdf4a4022bf3b066e108f
 e
 5src/main/java/com/chess/board/ValidateCoordinate.java,1\f\1f21ba5c24bd2a662a8da190b3c6f1990aa45d23
-[
-+src/main/java/com/chess/board/Utilites.java,c\0\c034da020320b5412411348f2244a5372962cf4c
 ^
 .src/main/java/com/chess/board/Coordinates.java,f\2\f28cdf92441cbf330515d62b1f9a5ff0d0130b3b
 _
