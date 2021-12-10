@@ -4,6 +4,7 @@ package com.chess.moves;
  * @author Kunj Vijaykumar Patel
  */
 public final class Utilities {
+
     public static final int ZERO = 0;
     public static final int ONE = 1;
     public static final int TWO = 2;
@@ -18,4 +19,5 @@ public final class Utilities {
     public static final String EXIT = "exit";
     public static final String ENTER_DESTINATION_POSITION = "Enter destination position = ";
     public static final String WHITE = "White";
+
 }

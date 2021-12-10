@@ -17,7 +17,7 @@ public class ValidateCoordinate implements IValidateCoordinate {
         if ((coordinates.getCoordinateX() >= ZERO && coordinates.getCoordinateX() < EIGHT)
                 && (coordinates.getCoordinateY() >= ZERO && coordinates.getCoordinateY() < EIGHT)) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }

@@ -1,21 +1,22 @@
 package com.chess.moves;
 
+import com.chess.moves.interfaces.IMoves;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static com.chess.Utilites.*;
 
 public class MovesTest {
-    Moves move = new Moves();
+    IMoves move = new Moves();
+
     @Test
     public void inputToRowTest() {
-        Assert.assertEquals(0, move.inputToRow("A8"));
+        Assert.assertEquals(ZERO, move.inputToRow(MOVE_ONE));
     }
 
     @Test
-    public void inputToColTest()
-    {
-        Assert.assertEquals(2, move.inputToCol("C7"));
+    public void inputToColTest() {
+        Assert.assertEquals(TWO, move.inputToCol(MOVE_TWO));
     }
 
 }

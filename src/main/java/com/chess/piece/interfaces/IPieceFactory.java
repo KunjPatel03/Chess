@@ -9,7 +9,7 @@ import com.chess.piece.Pawn;
  */
 
 public interface IPieceFactory {
-    ICoordinates createCoordinates(int xCoordinate, int yCoordinate);
+
     IPieceExistence createPieceExistence(boolean pieceExistence);
     ICalculateXDistance createXDistance(SquareBox startPosition, SquareBox endPosition);
     ICalculateYDistance createYDistance(SquareBox startPosition, SquareBox endPosition);
@@ -19,4 +19,5 @@ public interface IPieceFactory {
     IQueen createQueenPiece(String pieceName, String color);
     IRook createRookPiece(String pieceName, String color);
     IPawn createPawnPiece(String pieceName, String color);
+
 }

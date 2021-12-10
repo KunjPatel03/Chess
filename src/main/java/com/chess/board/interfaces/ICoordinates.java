@@ -5,6 +5,7 @@ package com.chess.board.interfaces;
  */
 
 public interface ICoordinates {
+
     int getCoordinateX();
 
     void setCoordinateX(int x);
@@ -12,4 +13,5 @@ public interface ICoordinates {
     int getCoordinateY();
 
     void setCoordinateY(int y);
+
 }

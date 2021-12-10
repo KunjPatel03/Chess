@@ -5,6 +5,7 @@ package com.chess.userauth.interfaces;
  */
 
 public interface IRegistration {
+
     void userRegistration();
 
     boolean isDataInserted();
@@ -20,4 +21,5 @@ public interface IRegistration {
     String getPassword();
 
     void setPassword(String password);
+
 }

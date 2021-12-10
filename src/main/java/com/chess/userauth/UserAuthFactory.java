@@ -19,7 +19,6 @@ public class UserAuthFactory extends UserAuthAbstractFactory implements com.ches
         return new Home();
     }
 
-
     @Override
     public IRegistration createRegistration() {
         return new Registration();
@@ -54,6 +53,5 @@ public class UserAuthFactory extends UserAuthAbstractFactory implements com.ches
     public ILoginDisplay createLoginDisplay() {
         return new LoginDisplay();
     }
-
 
 }

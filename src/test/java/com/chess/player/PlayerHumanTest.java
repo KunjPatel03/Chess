@@ -10,6 +10,7 @@ import org.junit.Test;
 
 public class PlayerHumanTest {
     IPlayerFactory playerFactory = new PlayerFactory();
+
     @Test
     public void testPlayerHumanNotNull() {
         Assert.assertNotNull(playerFactory.createPlayerHuman());

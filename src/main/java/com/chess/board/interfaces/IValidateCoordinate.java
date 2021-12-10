@@ -5,5 +5,7 @@ package com.chess.board.interfaces;
  */
 
 public interface IValidateCoordinate {
+
     boolean isCoordinateValid(ICoordinates coordinates);
+
 }

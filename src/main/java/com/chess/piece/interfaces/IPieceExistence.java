@@ -5,6 +5,8 @@ package com.chess.piece.interfaces;
  */
 
 public interface IPieceExistence {
+
     boolean isExists();
     void setExistence(boolean existence);
+
 }

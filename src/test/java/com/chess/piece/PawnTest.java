@@ -4,15 +4,18 @@ import com.chess.piece.interfaces.IPieceFactory;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static com.chess.piece.Utility.PAWN;
+import static com.chess.piece.Utility.WHITE;
+
 /**
  * @author Sanjuna Konda
  */
 
 public class PawnTest {
     IPieceFactory pieceFactory = new PieceFactory();
-    private Utility utility;
+
     @Test
     public void testPawnPieceNotNull() {
-        Assert.assertNotNull(pieceFactory.createPawnPiece(utility.PAWN, utility.WHITE));
+        Assert.assertNotNull(pieceFactory.createPawnPiece(PAWN, WHITE));
     }
 }

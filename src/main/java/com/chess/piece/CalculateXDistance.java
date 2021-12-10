@@ -8,6 +8,7 @@ import com.chess.piece.interfaces.ICalculateXDistance;
  */
 
 public class CalculateXDistance implements ICalculateXDistance {
+
     private SquareBox start;
     private SquareBox end;
     int xDistance;
@@ -22,4 +23,5 @@ public class CalculateXDistance implements ICalculateXDistance {
         xDistance = Math.abs(start.getCoordinates().getCoordinateX() - end.getCoordinates().getCoordinateX());
         return xDistance;
     }
+
 }

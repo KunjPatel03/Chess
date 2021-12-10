@@ -7,6 +7,7 @@ import com.chess.piece.interfaces.IPieceExistence;
  */
 
 public class PieceExistence implements IPieceExistence {
+
     private boolean existence;
 
     public PieceExistence(boolean existence) {
@@ -22,4 +23,5 @@ public class PieceExistence implements IPieceExistence {
     public void setExistence(boolean existence) {
         this.existence = existence;
     }
+
 }

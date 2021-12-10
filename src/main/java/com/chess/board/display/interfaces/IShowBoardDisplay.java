@@ -5,6 +5,7 @@ package com.chess.board.display.interfaces;
  */
 
 public interface IShowBoardDisplay {
+
     void displayOuterLines();
 
     void displayVerticalIndex(int xCord);
@@ -20,4 +21,5 @@ public interface IShowBoardDisplay {
     void displayHorizontalIndex();
 
     void displayMessage(String message);
+
 }

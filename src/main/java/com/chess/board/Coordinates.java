@@ -7,6 +7,7 @@ import com.chess.board.interfaces.ICoordinates;
  */
 
 public class Coordinates implements ICoordinates {
+
     private int coordinateX;
     private int coordinateY;
 
@@ -22,7 +23,7 @@ public class Coordinates implements ICoordinates {
 
     @Override
     public void setCoordinateX(int x) {
-        this.coordinateX=x;
+        this.coordinateX = x;
     }
 
     @Override
@@ -32,7 +33,7 @@ public class Coordinates implements ICoordinates {
 
     @Override
     public void setCoordinateY(int y) {
-        this.coordinateY=y;
+        this.coordinateY = y;
     }
 
 }

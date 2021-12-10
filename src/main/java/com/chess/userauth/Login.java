@@ -7,6 +7,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import static com.chess.userauth.Utilities.SELECT_QUERY;
+
 /**
  * @author Het Ketanbhai Shah
  */
@@ -47,10 +49,10 @@ public class Login {
     }
 
     public boolean authenticated() {
-        String QUERY = "SELECT count(*) as userCount FROM CSCI5308_26_DEVINT.Users where UserID =? and Password =?";
+
+        String QUERY = SELECT_QUERY;
         Connection conn;
         ConnectToDB connect = new ConnectToDB();
-        //conn = userAuthFactory.createConnectToDB().getConnection();
         conn = connect.getConnection();
         ResultSet resultSet = null;
         PreparedStatement preparedStmt = null;
@@ -72,5 +74,6 @@ public class Login {
             e.printStackTrace();
             return false;
         }
+
     }
 }

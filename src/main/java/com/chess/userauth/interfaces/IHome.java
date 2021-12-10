@@ -5,5 +5,7 @@ package com.chess.userauth.interfaces;
  */
 
 public interface IHome {
+
     void indexPart();
+
 }

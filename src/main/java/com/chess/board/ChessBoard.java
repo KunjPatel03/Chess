@@ -6,7 +6,10 @@ import com.chess.board.interfaces.ICoordinates;
 import com.chess.board.interfaces.ISquareBox;
 import com.chess.piece.interfaces.IPiece;
 
-import static com.chess.board.Utilites.*;
+import static com.chess.board.Utilites.EIGHT;
+import static com.chess.board.Utilites.ZERO;
+import static com.chess.board.Utilites.SEVEN;
+import static com.chess.board.Utilites.WRONG_INPUT;
 
 /**
  * @author Kunj Vijaykumar Patel

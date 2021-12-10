@@ -12,11 +12,6 @@ import com.chess.piece.interfaces.*;
 public class PieceFactory implements IPieceFactory {
 
     @Override
-    public ICoordinates createCoordinates(int xCoordinate, int yCoordinate) {
-        return new Coordinates(xCoordinate, yCoordinate);
-    }
-
-    @Override
     public IPieceExistence createPieceExistence(boolean pieceExistence) {
         return new PieceExistence(pieceExistence);
     }
@@ -60,4 +55,5 @@ public class PieceFactory implements IPieceFactory {
     public IPawn createPawnPiece(String pieceName, String color) {
         return new Pawn(pieceName, color);
     }
+
 }

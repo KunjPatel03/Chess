@@ -4,15 +4,18 @@ import com.chess.piece.interfaces.IPieceFactory;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static com.chess.piece.Utility.ROOK;
+import static com.chess.piece.Utility.WHITE;
+
 /**
  * @author Sanjuna Konda
  */
 
 public class RookTest {
     IPieceFactory pieceFactory = new PieceFactory();
-    private Utility utility;
+
     @Test
     public void testRookPieceNotNull() {
-        Assert.assertNotNull(pieceFactory.createRookPiece(utility.ROOK, utility.WHITE));
+        Assert.assertNotNull(pieceFactory.createRookPiece(ROOK, WHITE));
     }
 }

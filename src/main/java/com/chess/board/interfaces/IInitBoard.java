@@ -5,9 +5,11 @@ package com.chess.board.interfaces;
  */
 
 public interface IInitBoard {
+
     ISquareBox[][] initializeWhitePieces(ISquareBox[][] iSquareBoxes);
 
     ISquareBox[][] initializeBlackPieces(ISquareBox[][] iSquareBoxes);
 
     ISquareBox[][] initializeNewBoard(ISquareBox[][] iSquareBoxes);
+
 }

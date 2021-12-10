@@ -1,8 +1,11 @@
 package com.chess.userauth;
 
-import com.chess.userauth.interfaces.IUserAuthFactory;
 import org.junit.Assert;
 import org.junit.Test;
+
+import static com.chess.Utilites.TESTPSWD;
+import static com.chess.Utilites.USERID;
+
 /**
  * @author Het Ketanbhai Shah
  */
@@ -11,10 +14,9 @@ public class LoginTest {
 
     @Test
     public void authenticated() {
-        IUserAuthFactory userAuthFactory = new UserAuthFactory();
         Login login = new Login();
-        login.setUserId("hetshah");
-        login.setPassword("123");
+        login.setUserId(USERID);
+        login.setPassword(TESTPSWD);
         Assert.assertTrue(login.authenticated());
     }
 }

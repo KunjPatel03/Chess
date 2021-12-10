@@ -5,5 +5,7 @@ package com.chess.piece.interfaces;
  */
 
 public interface ICalculateXDistance {
+
     int calculateXDistanceValue();
+
 }

@@ -7,6 +7,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import static com.chess.userauth.Utilities.*;
+
 /**
  * @author Het Ketanbhai Shah
  */
@@ -51,9 +53,6 @@ public class Registration implements IRegistration {
 
     public void userRegistration() {
 
-
-        // Getting user details in input
-
         userAuthFactory.createRegistrationIO().getDetails(this);
 
         if (isDataInserted()) {
@@ -67,16 +66,16 @@ public class Registration implements IRegistration {
 
     public boolean isDataInserted() {
 
-        String QUERY = "INSERT INTO `CSCI5308_26_DEVINT`.`Users` (`UserName`, `UserID`, `Password`) VALUES (?,?,?)";
+        String QUERY = INSERT_QUERY;
 
         Connection conn;
         conn = userAuthFactory.createConnectToDB().getConnection();
         PreparedStatement preparedStmt;
         try {
             preparedStmt = conn.prepareStatement(QUERY);
-            preparedStmt.setString(1, getPlayerName());
-            preparedStmt.setString(2, getUserId());
-            preparedStmt.setString(3, getPassword());
+            preparedStmt.setString(ONE, getPlayerName());
+            preparedStmt.setString(TWO, getUserId());
+            preparedStmt.setString(THREE, getPassword());
             preparedStmt.execute();
             conn.close();
             return true;

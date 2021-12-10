@@ -6,25 +6,27 @@ import com.chess.userauth.interfaces.IUserAuthFactory;
 
 import java.util.Scanner;
 
+import static com.chess.userauth.Utilities.*;
+
 /**
  * @author Het Ketanbhai Shah
  */
 
 public class RegistrationIO implements com.chess.userauth.interfaces.IRegistrationIO {
+
     @Override
     public void getDetails(Registration registration) {
         IUserAuthFactory userAuthFactory = new UserAuthFactory();
         Scanner reader = new Scanner(System.in);
-        System.out.println("Enter your Name, ID and password for Registration");
-        System.out.print("Enter your name- ");
+
+        System.out.println(REGISTRATION_INPUT);
+        System.out.print(NAME_INPUT);
         registration.setPlayerName(reader.nextLine());
 
-
-        System.out.print("Enter User ID - ");
+        System.out.print(USERID_INPUT);
         registration.setUserId(reader.nextLine());
 
-        System.out.print("Enter Password - ");
+        System.out.print(PASSWORD_INPUT);
         registration.setPassword(reader.nextLine());
-
     }
 }

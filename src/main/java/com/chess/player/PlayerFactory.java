@@ -5,12 +5,13 @@ import com.chess.player.interfaces.IPlayerComputer;
 import com.chess.player.interfaces.IPlayerFactory;
 import com.chess.player.interfaces.IPlayerHuman;
 
+import static com.chess.player.Utility.WHITE;
+
 /**
  * @author Sanjuna Konda
  */
 
 public class PlayerFactory implements IPlayerFactory {
-    private Utility utility;
 
     @Override
     public IPlayer createPlayer() {
@@ -19,11 +20,11 @@ public class PlayerFactory implements IPlayerFactory {
 
     @Override
     public IPlayerHuman createPlayerHuman() {
-        return new PlayerHuman(utility.WHITE);
+        return new PlayerHuman(WHITE);
     }
 
     @Override
     public IPlayerComputer createPlayerComputer() {
-        return new PlayerComputer(utility.WHITE);
+        return new PlayerComputer(WHITE);
     }
 }

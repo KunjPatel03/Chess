@@ -10,10 +10,6 @@ public class Player implements IPlayer {
     private boolean playerHuman;
     private String color;
 
-    @Override
-    public boolean isPlayerHuman() {
-        return this.playerHuman;
-    }
 
     @Override
     public String getColor() {

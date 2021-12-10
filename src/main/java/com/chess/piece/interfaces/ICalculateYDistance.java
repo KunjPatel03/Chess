@@ -5,5 +5,7 @@ package com.chess.piece.interfaces;
  */
 
 public interface ICalculateYDistance {
+
     int calculateYDistanceValue();
+
 }

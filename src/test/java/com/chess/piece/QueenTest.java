@@ -4,15 +4,18 @@ import com.chess.piece.interfaces.IPieceFactory;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static com.chess.piece.Utility.QUEEN;
+import static com.chess.piece.Utility.WHITE;
+
 /**
  * @author Sanjuna Konda
  */
 
 public class QueenTest {
     IPieceFactory pieceFactory = new PieceFactory();
-    private Utility utility;
+
     @Test
     public void testQueenPieceNotNull() {
-        Assert.assertNotNull(pieceFactory.createQueenPiece(utility.QUEEN, utility.WHITE));
+        Assert.assertNotNull(pieceFactory.createQueenPiece(QUEEN, WHITE));
     }
 }

@@ -8,6 +8,7 @@ import com.chess.piece.interfaces.ICalculateYDistance;
  */
 
 public class CalculateYDistance implements ICalculateYDistance {
+
     private SquareBox start;
     private SquareBox end;
     int yDistance;
@@ -16,9 +17,11 @@ public class CalculateYDistance implements ICalculateYDistance {
         this.start = startPosition;
         this.end = endPosition;
     }
+
     @Override
     public int calculateYDistanceValue() {
         yDistance = Math.abs(start.getCoordinates().getCoordinateY() - end.getCoordinates().getCoordinateY());
         return yDistance;
     }
+
 }

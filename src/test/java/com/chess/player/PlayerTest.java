@@ -10,6 +10,7 @@ import org.junit.Test;
 
 public class PlayerTest {
     IPlayerFactory playerFactory = new PlayerFactory();
+
     @Test
     public void testPlayerNotNull() {
         Assert.assertNotNull(playerFactory.createPlayer());

@@ -1,8 +1,6 @@
 package com.chess.piece;
 
 import com.chess.board.SquareBox;
-import com.chess.board.interfaces.IBoard;
-import com.chess.board.interfaces.ICoordinates;
 import com.chess.piece.interfaces.IPiece;
 import com.chess.piece.interfaces.IPieceExistence;
 
@@ -11,6 +9,7 @@ import com.chess.piece.interfaces.IPieceExistence;
  */
 
 public abstract class Piece implements IPiece {
+
     private String pieceName;
     private String color;
     private IPieceExistence pieceExistence;
@@ -25,7 +24,7 @@ public abstract class Piece implements IPiece {
     }
 
     @Override
-    public String getPieceName(){
+    public String getPieceName() {
         return pieceName;
     }
 

@@ -6,13 +6,16 @@ package com.chess.player;
 
 import com.chess.player.interfaces.IPlayerComputer;
 
+import static com.chess.player.Utility.FALSE;
+import static com.chess.player.Utility.TRUE;
+
 public class PlayerComputer extends Player implements IPlayerComputer {
-    private boolean playerHuman;
+
+    private boolean playerHuman=TRUE;
     private String color;
-    private Utility utility;
 
     public PlayerComputer(String color) {
-        this.playerHuman = utility.FALSE;
+        this.playerHuman = FALSE;
         this.color = color;
     }
 

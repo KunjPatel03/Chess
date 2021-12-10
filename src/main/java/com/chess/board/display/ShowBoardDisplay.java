@@ -7,6 +7,7 @@ import com.chess.board.display.interfaces.IShowBoardDisplay;
  */
 
 public class ShowBoardDisplay implements IShowBoardDisplay {
+
     @Override
     public void displayOuterLines() {
         System.out.println(" ____________________________________");
@@ -47,6 +48,5 @@ public class ShowBoardDisplay implements IShowBoardDisplay {
     public void displayMessage(String message) {
         System.out.print(message);
     }
-
 
 }
